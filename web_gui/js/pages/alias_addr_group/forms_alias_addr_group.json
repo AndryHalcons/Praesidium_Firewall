@@ -1,0 +1,32 @@
+{
+    "alias_addr_group": {
+        "select": {
+            "action": [
+                ""
+            ]
+        },
+        "object_multiselect": {
+            "content": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "checkbox": {
+            "enable": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "id": [
+                "1-10000"
+            ]
+        },
+        "tooltip_fields": {
+            "content": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        }
+    }
+}

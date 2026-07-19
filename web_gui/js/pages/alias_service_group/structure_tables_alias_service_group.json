@@ -1,0 +1,7 @@
+{
+  "alias_service_group": [
+    "id",
+    "name",
+    "content"
+  ]
+}

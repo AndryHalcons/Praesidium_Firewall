@@ -1,0 +1,17 @@
+{
+  "Search_Filter": [
+    "proto",
+    "state",
+    "source",
+    "source_port",
+    "destination",
+    "destination_port",
+    "reply_source",
+    "reply_source_port",
+    "reply_destination",
+    "reply_destination_port",
+    "timeout",
+    "assured",
+    "id"
+  ]
+}

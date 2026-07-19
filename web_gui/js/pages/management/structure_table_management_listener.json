@@ -1,0 +1,8 @@
+{
+    "table_management_listener": [
+        "id",
+        "listen_ip",
+        "listen_port",
+        "server_name"
+    ]
+}

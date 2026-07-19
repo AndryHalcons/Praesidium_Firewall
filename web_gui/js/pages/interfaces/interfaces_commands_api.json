@@ -1,0 +1,364 @@
+{
+    "ethernets": {
+        "list": {
+            "method": "GET",
+            "path": "/interfaces/ethernets"
+        },
+        "create": {
+            "method": "POST",
+            "path": "/interfaces/ethernets"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/interfaces/ethernets/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "delete": {
+            "method": "DELETE",
+            "path": "/interfaces/ethernets/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "table": {
+            "title_key": "interfaces.ethernets_title",
+            "description_key": "interfaces.ethernets_description",
+            "row_key": "uuid",
+            "context_key": "uuid",
+            "payload_wrapper": "config",
+            "payload_fields": [
+                "name",
+                "dhcp4",
+                "dhcp6",
+                "addresses",
+                "gateway4",
+                "gateway6",
+                "mtu",
+                "macaddress",
+                "nameservers.addresses",
+                "nameservers.search",
+                "optional",
+                "accept-ra",
+                "wakeonlan",
+                "routes.to",
+                "routes.via",
+                "routes.metric",
+                "ipv6-privacy",
+                "dhcp4-overrides.use-dns",
+                "dhcp4-overrides.use-routes",
+                "dhcp4-overrides.send-hostname",
+                "dhcp4-overrides.hostname",
+                "dhcp4-overrides.use-hostname",
+                "dhcp6-overrides.use-dns",
+                "dhcp6-overrides.use-routes",
+                "local",
+                "remote",
+                "peers.allowed-ips",
+                "peers.endpoint",
+                "routing-policy.from",
+                "routing-policy.to",
+                "match.name",
+                "match.macaddress",
+                "match.driver",
+                "set-name"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "interfaces_columns",
+            "loading_key": "interfaces.loading",
+            "empty_key": "interfaces.empty_family",
+            "disable_buttons": [
+                "add"
+            ]
+        }
+    },
+    "bridges": {
+        "list": {
+            "method": "GET",
+            "path": "/interfaces/bridges"
+        },
+        "create": {
+            "method": "POST",
+            "path": "/interfaces/bridges"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/interfaces/bridges/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "delete": {
+            "method": "DELETE",
+            "path": "/interfaces/bridges/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "table": {
+            "title_key": "interfaces.bridges_title",
+            "description_key": "interfaces.bridges_description",
+            "row_key": "uuid",
+            "context_key": "uuid",
+            "payload_wrapper": "config",
+            "payload_fields": [
+                "name",
+                "interfaces",
+                "dhcp4",
+                "dhcp6",
+                "addresses",
+                "gateway4",
+                "gateway6",
+                "mtu",
+                "macaddress",
+                "nameservers.addresses",
+                "nameservers.search",
+                "optional",
+                "accept-ra",
+                "wakeonlan",
+                "routes.to",
+                "routes.via",
+                "routes.metric",
+                "ipv6-privacy",
+                "dhcp4-overrides.use-dns",
+                "dhcp4-overrides.use-routes",
+                "dhcp4-overrides.send-hostname",
+                "dhcp4-overrides.hostname",
+                "dhcp4-overrides.use-hostname",
+                "dhcp6-overrides.use-dns",
+                "dhcp6-overrides.use-routes",
+                "local",
+                "remote",
+                "peers.allowed-ips",
+                "peers.endpoint",
+                "routing-policy.from",
+                "routing-policy.to",
+                "parameters.stp",
+                "parameters.priority",
+                "parameters.forward-delay",
+                "parameters.hello-time",
+                "parameters.max-age",
+                "parameters.ageing-time"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "interfaces_columns",
+            "loading_key": "interfaces.loading",
+            "empty_key": "interfaces.empty_family"
+        }
+    },
+    "bonds": {
+        "list": {
+            "method": "GET",
+            "path": "/interfaces/bonds"
+        },
+        "create": {
+            "method": "POST",
+            "path": "/interfaces/bonds"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/interfaces/bonds/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "delete": {
+            "method": "DELETE",
+            "path": "/interfaces/bonds/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "table": {
+            "title_key": "interfaces.bonds_title",
+            "description_key": "interfaces.bonds_description",
+            "row_key": "uuid",
+            "context_key": "uuid",
+            "payload_wrapper": "config",
+            "payload_fields": [
+                "name",
+                "interfaces",
+                "dhcp4",
+                "dhcp6",
+                "addresses",
+                "gateway4",
+                "gateway6",
+                "mtu",
+                "macaddress",
+                "nameservers.addresses",
+                "nameservers.search",
+                "optional",
+                "accept-ra",
+                "routes.to",
+                "routes.via",
+                "routes.metric",
+                "ipv6-privacy",
+                "dhcp4-overrides.use-dns",
+                "dhcp4-overrides.use-routes",
+                "dhcp4-overrides.send-hostname",
+                "dhcp4-overrides.hostname",
+                "dhcp4-overrides.use-hostname",
+                "dhcp6-overrides.use-dns",
+                "dhcp6-overrides.use-routes",
+                "local",
+                "remote",
+                "peers.allowed-ips",
+                "peers.endpoint",
+                "routing-policy.from",
+                "routing-policy.to",
+                "parameters.mode",
+                "parameters.primary",
+                "parameters.mii-monitor-interval",
+                "parameters.up-delay",
+                "parameters.down-delay",
+                "parameters.lacp-rate",
+                "parameters.transmit-hash-policy",
+                "parameters.min-links"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "interfaces_columns",
+            "loading_key": "interfaces.loading",
+            "empty_key": "interfaces.empty_family"
+        }
+    },
+    "vlans": {
+        "list": {
+            "method": "GET",
+            "path": "/interfaces/vlans"
+        },
+        "create": {
+            "method": "POST",
+            "path": "/interfaces/vlans"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/interfaces/vlans/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "delete": {
+            "method": "DELETE",
+            "path": "/interfaces/vlans/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "table": {
+            "title_key": "interfaces.vlans_title",
+            "description_key": "interfaces.vlans_description",
+            "row_key": "uuid",
+            "context_key": "uuid",
+            "payload_wrapper": "config",
+            "payload_fields": [
+                "name",
+                "id",
+                "link",
+                "dhcp4",
+                "dhcp6",
+                "addresses",
+                "gateway4",
+                "gateway6",
+                "mtu",
+                "macaddress",
+                "nameservers.addresses",
+                "nameservers.search",
+                "optional",
+                "accept-ra",
+                "routes.to",
+                "routes.via",
+                "routes.metric",
+                "ipv6-privacy",
+                "dhcp4-overrides.use-dns",
+                "dhcp4-overrides.use-routes",
+                "dhcp4-overrides.send-hostname",
+                "dhcp4-overrides.hostname",
+                "dhcp4-overrides.use-hostname",
+                "dhcp6-overrides.use-dns",
+                "dhcp6-overrides.use-routes",
+                "local",
+                "remote",
+                "peers.allowed-ips",
+                "peers.endpoint",
+                "routing-policy.from",
+                "routing-policy.to"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "interfaces_columns",
+            "loading_key": "interfaces.loading",
+            "empty_key": "interfaces.empty_family"
+        }
+    },
+    "wifis": {
+        "list": {
+            "method": "GET",
+            "path": "/interfaces/wifis"
+        },
+        "create": {
+            "method": "POST",
+            "path": "/interfaces/wifis"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/interfaces/wifis/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "delete": {
+            "method": "DELETE",
+            "path": "/interfaces/wifis/{uuid}",
+            "params": [
+                "uuid"
+            ]
+        },
+        "table": {
+            "title_key": "interfaces.wifis_title",
+            "description_key": "interfaces.wifis_description",
+            "row_key": "uuid",
+            "context_key": "uuid",
+            "payload_wrapper": "config",
+            "payload_fields": [
+                "name",
+                "dhcp4",
+                "dhcp6",
+                "addresses",
+                "gateway4",
+                "gateway6",
+                "mtu",
+                "macaddress",
+                "nameservers.addresses",
+                "nameservers.search",
+                "optional",
+                "accept-ra",
+                "wakeonlan",
+                "routes.to",
+                "routes.via",
+                "routes.metric",
+                "ipv6-privacy",
+                "dhcp4-overrides.use-dns",
+                "dhcp4-overrides.use-routes",
+                "dhcp4-overrides.send-hostname",
+                "dhcp4-overrides.hostname",
+                "dhcp4-overrides.use-hostname",
+                "dhcp6-overrides.use-dns",
+                "dhcp6-overrides.use-routes",
+                "local",
+                "remote",
+                "peers.allowed-ips",
+                "peers.endpoint",
+                "routing-policy.from",
+                "routing-policy.to",
+                "access-points.<SSID>.password",
+                "access-points.<SSID>.mode",
+                "access-points.<SSID>.band",
+                "access-points.<SSID>.channel"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "interfaces_columns",
+            "loading_key": "interfaces.loading",
+            "empty_key": "interfaces.empty_family"
+        }
+    }
+}

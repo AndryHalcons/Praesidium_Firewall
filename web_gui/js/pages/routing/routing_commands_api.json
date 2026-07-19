@@ -1,0 +1,12 @@
+{
+  "routing": {
+    "read": {
+      "method": "GET",
+      "path": "/routing"
+    },
+    "reload": {
+      "method": "POST",
+      "path": "/routing/reload"
+    }
+  }
+}

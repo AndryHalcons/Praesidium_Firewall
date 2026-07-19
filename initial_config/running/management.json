@@ -1,0 +1,46 @@
+{
+    "table_management_listener": [
+        {
+            "id": "1",
+            "UUID": "listenerapache-1-19700101000000000-9764",
+            "listen_ip": "0.0.0.0",
+            "listen_port": "443",
+            "server_name": "praesidium.local"
+        }
+    ],
+    "table_management_allowed_sources": [
+        {
+            "id": "1",
+            "UUID": "managementnetworks-1-19700101000000000-9764",
+            "source_cidr": "0.0.0.0/0",
+            "description": "default-management-access"
+        },
+        {
+            "id": "2",
+            "UUID": "managementnetworks-2-19700101000000000-3844",
+            "source_cidr": "192.168.0.0/16",
+            "description": "private-network-1"
+        },
+        {
+            "id": "3",
+            "UUID": "managementnetworks-3-19700101000000000-2084",
+            "source_cidr": "10.0.0.0/8",
+            "description": "private-network-2"
+        },
+        {
+            "source_cidr": "172.16.0.0/12",
+            "description": "private-network-3",
+            "id": "4",
+            "UUID": "managementnetworks-4-19700101000000000-5946"
+        }
+    ],
+    "table_management_tls": [
+        {
+            "id": "1",
+            "UUID": "certtls-1-19700101000000000-9764",
+            "certificate_file": "praesidium_management_cert.pem",
+            "certificate_key": "praesidium_management_key.key",
+            "certificate_chain": "praesidium_management_chain.pem"
+        }
+    ]
+}

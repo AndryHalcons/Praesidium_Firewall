@@ -1,0 +1,12 @@
+{
+  "monitor_logs": {
+    "search": {
+      "method": "POST",
+      "path": "/monitor-logs/search"
+    },
+    "options": {
+      "method": "GET",
+      "path": "/monitor-logs/options"
+    }
+  }
+}

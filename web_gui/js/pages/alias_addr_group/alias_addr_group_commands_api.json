@@ -1,0 +1,40 @@
+{
+  "alias_addr_group": {
+    "list": {
+      "method": "GET",
+      "path": "/alias-ip/address-groups"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/alias-ip/address-groups"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/alias-ip/address-groups/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/alias-ip/address-groups/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "menu.alias_address_group",
+      "description_key": "alias.address_group_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "payload_fields": [
+        "name",
+        "content"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "alias",
+      "loading_key": "alias.loading",
+      "empty_key": "alias.empty"
+    }
+  }
+}

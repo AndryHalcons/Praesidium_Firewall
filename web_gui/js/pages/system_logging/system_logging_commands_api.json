@@ -1,0 +1,26 @@
+{
+  "system_logging": {
+    "list": {
+      "method": "GET",
+      "path": "/system-logging"
+    }
+  },
+  "journald": {
+    "update": {
+      "method": "PATCH",
+      "path": "/system-logging/journald"
+    }
+  },
+  "system_logs": {
+    "update": {
+      "method": "PATCH",
+      "path": "/system-logging/system-logs"
+    }
+  },
+  "nftables_logs": {
+    "update": {
+      "method": "PATCH",
+      "path": "/system-logging/nftables-logs"
+    }
+  }
+}

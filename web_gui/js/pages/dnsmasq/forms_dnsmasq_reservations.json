@@ -1,0 +1,28 @@
+{
+  "dnsmasq_reservations": {
+    "select_list": {
+      "interface": [
+        "GET /api/v1/dnsmasq/reservation-interfaces"
+      ]
+    },
+    "checkbox": {
+      "enable": {
+        "checked": "true",
+        "unchecked": "false"
+      }
+    },
+    "not_editable": {
+      "id": []
+    },
+    "object_multiselect": {
+      "ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ]
+    },
+    "tooltip_fields": {
+      "ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ]
+    }
+  }
+}

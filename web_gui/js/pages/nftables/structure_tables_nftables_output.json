@@ -1,0 +1,26 @@
+{
+    "nftables_output": [
+        "family",
+        "table",
+        "chain",
+        "id",
+        "position",
+        "action",
+        "enable",
+        "name",
+        "ip.protocol",
+        "ip.saddr.op",
+        "ip.saddr",
+        "sport.op",
+        "sport",
+        "ip.daddr.op",
+        "ip.daddr",
+        "dport.op",
+        "dport",
+        "meta.oifname",
+        "ct.state",
+        "packets",
+        "bytes",
+        "log"
+    ]
+}

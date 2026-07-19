@@ -1,0 +1,38 @@
+{
+    "wireguard_site_to_site": {
+        "select": {},
+        "checkbox": {
+            "enabled": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "name": []
+        }
+    },
+    "wireguard_remote_access": {
+        "select": {},
+        "checkbox": {
+            "enabled": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "name": []
+        }
+    },
+    "wireguard_remote_clients": {
+        "select": {},
+        "checkbox": {
+            "enabled": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "name": []
+        }
+    }
+}

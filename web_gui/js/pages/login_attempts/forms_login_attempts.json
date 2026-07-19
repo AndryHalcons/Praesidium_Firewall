@@ -1,0 +1,11 @@
+{
+  "login_attempts": {
+    "not_editable": {
+      "client_ip": [],
+      "failed_count": [],
+      "first_failed_at": [],
+      "locked_until": [],
+      "usernames": []
+    }
+  }
+}

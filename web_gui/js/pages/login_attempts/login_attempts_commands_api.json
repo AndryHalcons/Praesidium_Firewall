@@ -1,0 +1,30 @@
+{
+  "login_attempts": {
+    "list": {
+      "method": "GET",
+      "path": "/login-attempts/"
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/login-attempts/{client_ip}",
+      "params": [
+        "client_ip"
+      ]
+    },
+    "table": {
+      "title_key": "login_attempts.title",
+      "description_key": "login_attempts.description",
+      "row_key": "client_ip",
+      "context_key": "client_ip",
+      "rows_key": "attempts",
+      "readonly_chips": true,
+      "column_label_prefix": "login_attempts",
+      "loading_key": "login_attempts.loading",
+      "empty_key": "login_attempts.empty",
+      "disable_buttons": [
+        "add",
+        "edit"
+      ]
+    }
+  }
+}

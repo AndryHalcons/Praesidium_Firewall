@@ -1,0 +1,32 @@
+{
+    "alias_service_group": {
+        "select": {
+            "action": [
+                ""
+            ]
+        },
+        "object_multiselect": {
+            "content": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ]
+        },
+        "checkbox": {
+            "enable": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "id": [
+                "1-10000"
+            ]
+        },
+        "tooltip_fields": {
+            "content": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ]
+        }
+    }
+}

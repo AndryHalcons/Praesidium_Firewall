@@ -1,0 +1,17 @@
+{
+    "table_management_tls": {
+        "select": {
+            "certificate_file": [],
+            "certificate_key": [],
+            "certificate_chain": []
+        },
+        "checkbox": {},
+        "not_editable": {
+            "id": [
+                "1-10000"
+            ]
+        },
+        "disable_add": true,
+        "disable_delete": true
+    }
+}

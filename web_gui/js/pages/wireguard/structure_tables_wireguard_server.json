@@ -1,0 +1,16 @@
+{
+  "wireguard_server": [
+    "id",
+    "name",
+    "enabled",
+    "interface",
+    "server_vpn_ip",
+    "vpn_network",
+    "listen_port",
+    "public_endpoint",
+    "internal_networks",
+    "dns",
+    "private_key",
+    "mtu"
+  ]
+}

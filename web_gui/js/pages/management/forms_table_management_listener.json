@@ -1,0 +1,13 @@
+{
+    "table_management_listener": {
+        "select": {},
+        "checkbox": {},
+        "not_editable": {
+            "id": [
+                "1-10000"
+            ]
+        },
+        "disable_add": true,
+        "disable_delete": true
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "monitor_session": {
+    "run": {
+      "method": "POST",
+      "path": "/monitor-session/run"
+    },
+    "refresh": {
+      "method": "POST",
+      "path": "/monitor-session/refresh"
+    },
+    "sessions": {
+      "method": "GET",
+      "path": "/monitor-session/sessions"
+    },
+    "columns": {
+      "method": "GET",
+      "path": "/monitor-session/columns"
+    }
+  }
+}

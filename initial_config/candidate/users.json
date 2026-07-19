@@ -1,0 +1,68 @@
+{
+  "table_users": [
+    {
+      "id": "1",
+      "UUID": "users-1-19700101000000000-8672",
+      "user_name": "testuser",
+      "user_pass": "",
+      "user_role": "viewer",
+      "user_language": "espanol",
+      "password_changed_at": "",
+      "force_password_change": "false"
+    },
+    {
+      "id": "2",
+      "UUID": "users-2-19700101000000000-8673",
+      "user_name": "testuser2",
+      "user_pass": "",
+      "user_role": "admin",
+      "user_language": "english",
+      "password_changed_at": "",
+      "force_password_change": "false"
+    },
+    {
+      "id": "3",
+      "UUID": "users-3-19700101000000000-9689",
+      "user_name": "praesidium",
+      "user_pass": "",
+      "user_role": "admin",
+      "user_language": "espanol",
+      "password_changed_at": "",
+      "force_password_change": "false"
+    },
+    {
+      "id": "4",
+      "UUID": "users-4-19700101000000000-8673",
+      "user_name": "alpha",
+      "user_pass": "",
+      "user_role": "admin",
+      "user_language": "english",
+      "password_changed_at": "",
+      "force_password_change": "false"
+    }
+  ],
+  "table_password_policy": [
+    {
+      "id": "1",
+      "UUID": "passpolicy-1-19700101000000000-9764",
+      "password_min_length": "12",
+      "password_require_uppercase": "true",
+      "password_require_lowercase": "true",
+      "password_require_number": "true",
+      "password_require_symbol": "true",
+      "password_expiration_days": "90",
+      "password_history_count": "5",
+      "password_min_age_days": "0",
+      "login_max_failed_attempts": "5",
+      "login_lockout_minutes": "30",
+      "login_failed_window_minutes": "15",
+      "force_password_change_on_next_login": "false",
+      "force_password_change_for_new_users": "true",
+      "password_disallow_username": "true",
+      "password_disallow_common_passwords": "true",
+      "force_password_change_since": ""
+    }
+  ],
+  "table_password_history": [],
+  "table_login_attempts": []
+}

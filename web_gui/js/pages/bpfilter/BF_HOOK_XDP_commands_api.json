@@ -1,0 +1,60 @@
+{
+  "BF_HOOK_XDP": {
+    "list": {
+      "method": "GET",
+      "path": "/bpfilter/BF_HOOK_XDP"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/bpfilter/BF_HOOK_XDP"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/bpfilter/BF_HOOK_XDP/{rule_id}",
+      "params": [
+        "rule_id"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/bpfilter/BF_HOOK_XDP/{rule_id}",
+      "params": [
+        "rule_id"
+      ]
+    },
+    "table": {
+      "title_key": "menu.bpfilter_xdp",
+      "description_key": "bpfilter.xdp_description",
+      "row_key": "id",
+      "context_key": "rule_id",
+      "rows_key": "rules",
+      "payload_wrapper": "rule",
+      "payload_fields": [
+        "hook",
+        "chain",
+        "position",
+        "action",
+        "enable",
+        "name",
+        "interface",
+        "l3_protocol",
+        "l4_protocol",
+        "source",
+        "sport",
+        "destination",
+        "dport",
+        "tcp_flags",
+        "ipv6_next_header",
+        "icmp_type",
+        "icmp_code",
+        "icmpv6_type",
+        "icmpv6_code",
+        "probability"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "bpfilter",
+      "loading_key": "bpfilter.loading",
+      "empty_key": "bpfilter.empty"
+    }
+  }
+}

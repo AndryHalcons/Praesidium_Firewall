@@ -1,0 +1,9 @@
+{
+  "login_attempts": [
+    "client_ip",
+    "usernames",
+    "failed_count",
+    "first_failed_at",
+    "locked_until"
+  ]
+}

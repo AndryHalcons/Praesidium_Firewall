@@ -1,0 +1,66 @@
+{
+  "journald": {
+    "not_editable": {
+      "uuid": true
+    },
+    "select": {
+      "system_max_use": ["10M", "25M", "50M", "100M", "250M", "500M", "1G", "2G"],
+      "system_keep_free": ["10M", "25M", "50M", "100M", "250M", "500M", "1G", "2G"],
+      "runtime_max_use": ["10M", "25M", "50M", "100M", "250M", "500M", "1G", "2G"],
+      "max_retention_sec": ["1day", "3day", "7day", "14day", "30day"]
+    },
+    "checkbox": {
+      "compress": {
+        "checked": true,
+        "unchecked": false
+      }
+    }
+  },
+  "system_logs": {
+    "not_editable": {
+      "uuid": true
+    },
+    "select": {
+      "rotation": ["daily", "weekly"],
+      "rotate": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+      "maxsize": ["10M", "25M", "50M", "100M", "250M", "500M", "1G", "2G"]
+    },
+    "checkbox": {
+      "enabled": {
+        "checked": true,
+        "unchecked": false
+      },
+      "compress": {
+        "checked": true,
+        "unchecked": false
+      },
+      "delaycompress": {
+        "checked": true,
+        "unchecked": false
+      }
+    }
+  },
+  "nftables_logs": {
+    "not_editable": {
+      "uuid": true
+    },
+    "select": {
+      "size": ["10M", "25M", "50M", "100M", "250M", "500M", "1G", "2G"],
+      "rotate": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+    },
+    "checkbox": {
+      "enabled": {
+        "checked": true,
+        "unchecked": false
+      },
+      "compress": {
+        "checked": true,
+        "unchecked": false
+      },
+      "delaycompress": {
+        "checked": true,
+        "unchecked": false
+      }
+    }
+  }
+}

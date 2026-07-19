@@ -1,0 +1,63 @@
+# Mapa FastAPI nativo - Praesidium
+
+```text
+fastApi/
+ ├── app/
+ │   ├── api/
+ │   ├── core/
+ │   ├── modules/
+ │   └── storage/
+ ├── dependencies/
+ ├── requirements.txt
+ ├── tests/
+ ├── FASTAPI_DESIGN.md
+ └── fastapi_map.txt
+```
+
+## Instalación
+
+```text
+repo:       fastApi/
+instalado: /opt/praesidium/fastapi/
+servicio:  praesidium-fastapi.service
+unidad:    /etc/systemd/system/praesidium-fastapi.service
+```
+
+## Runtime
+
+```text
+/opt/praesidium/fastapi/app
+/opt/praesidium/fastapi/.venv
+/opt/praesidium/fastapi/.env
+/opt/praesidium/fastapi/dependencies
+```
+
+## Datos Praesidium
+
+```text
+/var/lib/praesidium/candidate
+/var/lib/praesidium/running
+/var/lib/praesidium/commits
+/var/lib/praesidium/backups
+/var/lib/praesidium/state
+/var/lib/praesidium/scripts
+```
+
+## Logs Praesidium
+
+```text
+/var/log/praesidium
+```
+
+## Configuración FastAPI
+
+```text
+PRAESIDIUM_DATA_ROOT=/var/lib/praesidium
+PRAESIDIUM_LOG_ROOT=/var/log/praesidium
+```
+
+## Healthcheck
+
+```text
+http://0.0.0.0:8000/health
+```

@@ -1,0 +1,39 @@
+{
+    "select":
+    {
+        
+      "Protocol": [
+        "",
+        "TCP",
+        "UDP",
+        "ICMP",
+        "ICMPV6"
+      ],
+      "Action": [
+        "",
+        "ACCEPT",
+        "DROP"
+      ],
+     "Firewall": [
+        "NFTABLES",
+        "BPFILTER"
+      ],
+    "Max_Records": [
+        "100",
+        "200",
+        "500"
+      ]
+    },
+    "date":
+    {
+        
+      "Start_Date":"",
+      "End_Date": ""
+    },
+    "time":
+    {
+        
+      "Start_Time": "",
+      "End_Time": ""
+    }
+}

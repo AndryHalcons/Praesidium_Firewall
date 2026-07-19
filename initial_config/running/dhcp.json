@@ -1,0 +1,73 @@
+{
+    "dhcp": [
+        {
+            "rule": {
+                "id": "1",
+                "UUID": "dnsmasq-1-19700101000000000-0208",
+                "enable": "true",
+                "mode": "server",
+                "interface": "br1",
+                "range_start": "10.0.0.100",
+                "range_end": "10.0.0.200",
+                "lease_time": "12h",
+                "gateway": "10.0.0.254",
+                "netmask": "255.255.255.0",
+                "dns_primary": "10.0.0.254",
+                "dns_secondary": "",
+                "ntp_server": "",
+                "relay_local_ip": "",
+                "relay_dest_server": ""
+            }
+        }
+    ],
+    "dhcp_reservation": [
+        {
+            "rule": {
+                "id": "1",
+                "UUID": "dnsmasq-1-19700101000000000-9865",
+                "enable": "true",
+                "interface": "br1",
+                "mac": "02:11:22:33:44:01",
+                "ip": "10.0.0.10",
+                "hostname": "",
+                "lease_time": ""
+            }
+        },
+        {
+            "rule": {
+                "id": "2",
+                "UUID": "dnsmasq-2-19700101000000000-5542",
+                "enable": "true",
+                "interface": "br1",
+                "mac": "02:11:22:33:44:02",
+                "ip": "10.0.0.11",
+                "hostname": "",
+                "lease_time": ""
+            }
+        },
+        {
+            "rule": {
+                "id": "3",
+                "UUID": "dnsmasq-3-19700101000000000-3620",
+                "enable": "true",
+                "interface": "br1",
+                "mac": "02:11:22:33:44:03",
+                "ip": "10.0.0.12",
+                "hostname": "",
+                "lease_time": ""
+            }
+        },
+        {
+            "rule": {
+                "id": "4",
+                "UUID": "dnsmasq-4-19700101000000000-9231",
+                "enable": "true",
+                "interface": "br1",
+                "mac": "02:11:22:33:44:04",
+                "ip": "10.0.0.13",
+                "hostname": "",
+                "lease_time": ""
+            }
+        }
+    ]
+}

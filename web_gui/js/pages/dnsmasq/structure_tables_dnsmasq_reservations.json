@@ -1,0 +1,12 @@
+{
+  "dnsmasq_reservations": [
+    "id",
+    "name",
+    "enable",
+    "interface",
+    "mac",
+    "ip",
+    "hostname",
+    "lease_time"
+  ]
+}

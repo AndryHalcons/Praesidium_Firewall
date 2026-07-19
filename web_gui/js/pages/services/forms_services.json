@@ -1,0 +1,16 @@
+{
+    "services": {
+        "checkbox": {
+            "desired_enabled": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "service_name": [],
+            "display_name": [],
+            "runtime_status": [],
+            "configurable": []
+        }
+    }
+}

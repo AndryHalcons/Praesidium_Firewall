@@ -1,0 +1,47 @@
+{
+  "dnsmasq_reservations": {
+    "list": {
+      "method": "GET",
+      "path": "/dnsmasq/reservations"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/dnsmasq/reservations"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/dnsmasq/reservations/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/dnsmasq/reservations/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "dnsmasq_page.reservations_title",
+      "description_key": "dnsmasq_page.reservations_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "rows_key": "rules",
+      "payload_wrapper": "rule",
+      "payload_fields": [
+        "name",
+        "enable",
+        "interface",
+        "mac",
+        "ip",
+        "hostname",
+        "lease_time"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "dnsmasq_page.columns",
+      "loading_key": "dnsmasq_page.loading",
+      "empty_key": "dnsmasq_page.reservations_empty"
+    }
+  }
+}

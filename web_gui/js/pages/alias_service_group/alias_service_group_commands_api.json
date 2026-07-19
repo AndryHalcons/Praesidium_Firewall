@@ -1,0 +1,40 @@
+{
+  "alias_service_group": {
+    "list": {
+      "method": "GET",
+      "path": "/alias-services/service-groups"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/alias-services/service-groups"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/alias-services/service-groups/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/alias-services/service-groups/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "menu.alias_service_group",
+      "description_key": "alias.service_group_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "payload_fields": [
+        "name",
+        "content"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "alias",
+      "loading_key": "alias.loading",
+      "empty_key": "alias.empty"
+    }
+  }
+}

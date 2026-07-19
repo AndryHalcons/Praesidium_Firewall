@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "apply": {
+      "method": "POST",
+      "path": "/commit/apply"
+    },
+    "preview": {
+      "method": "GET",
+      "path": "/commit/preview"
+    }
+  }
+}

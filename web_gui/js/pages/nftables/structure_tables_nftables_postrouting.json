@@ -1,0 +1,27 @@
+{
+    "nftables_postrouting": [
+        "family",
+        "table",
+        "chain",
+        "id",
+        "position",
+        "enable",
+        "name",
+        "ip.protocol",
+        "ip.saddr.op",
+        "ip.saddr",
+        "sport.op",
+        "sport",
+        "ip.daddr.op",
+        "ip.daddr",
+        "dport.op",
+        "dport",
+        "meta.oifname",
+        "snat.addr",
+        "masquerade",
+        "ct.state",
+        "packets",
+        "bytes",
+        "log"
+    ]
+}

@@ -1,0 +1,968 @@
+:root {
+  --praesidium-ui-gap: 18px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.login-view {
+  min-height: 100vh;
+}
+
+.api-settings {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(184, 198, 215, 0.22);
+}
+
+.api-settings label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: rgba(247, 250, 252, 0.72);
+}
+
+.api-settings button,
+.praesidium-link-button {
+  margin-top: 8px;
+}
+
+.praesidium-link-button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: rgba(247, 250, 252, 0.72);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.app-view {
+  min-height: 100vh;
+}
+
+.top-menu a.active,
+.sidebar a.active {
+  background: rgba(15, 111, 179, 0.28);
+  border-left: 3px solid #5aa9e6;
+}
+
+.main-content {
+  min-height: 540px;
+  background: var(--praesidium-bg-panel);
+  color: var(--praesidium-text);
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-md);
+  box-shadow: var(--praesidium-shadow-sm);
+  outline: none;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content p {
+  color: inherit;
+}
+
+.pf-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--praesidium-ui-gap);
+  margin-bottom: 18px;
+}
+
+.pf-page-title h2,
+.pf-page-title h3 {
+  margin: 0 0 6px;
+}
+
+.pf-muted {
+  color: var(--praesidium-text-soft);
+}
+
+.pf-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.pf-card {
+  padding: 16px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-md);
+  background: var(--praesidium-bg-panel);
+  box-shadow: var(--praesidium-shadow-sm);
+}
+
+.pf-card h3,
+.pf-card h4 {
+  margin: 0 0 8px;
+}
+
+.pf-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+
+.pf-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-md);
+  background: var(--praesidium-bg-panel);
+}
+
+
+
+.button_add,
+.button_edit,
+.button_save,
+.button_delete,
+.button_download,
+.certificate-file-input::file-selector-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.button_add::before {
+  content: "➕";
+}
+
+.button_edit::before {
+  content: "✏️";
+}
+
+.button_save::before {
+  content: "💾";
+}
+
+.button_edit,
+.button_save,
+.certificate-file-input::file-selector-button {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+
+.button_delete {
+  background: linear-gradient(135deg, #dc3545, #a71d2a);
+}
+
+.button_delete::before {
+  content: "🗑️";
+}
+
+.button_download {
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+}
+
+.button_download::before {
+  content: "\2B07\FE0E";
+}
+
+.button_add:hover,
+.button_edit:hover,
+.button_save:hover,
+.button_delete:hover,
+.button_download:hover,
+.certificate-file-input::file-selector-button:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.button_add:active,
+.button_edit:active,
+.button_save:active,
+.button_delete:active,
+.button_download:active,
+.certificate-file-input::file-selector-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.pf-table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+
+
+.table-readonly-chips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.table-readonly-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--praesidium-border-strong);
+  background: #f8fafc;
+  color: var(--praesidium-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+
+.modal-object-multiselect {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(220px, 1.2fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.object-multiselect-content-pane,
+.object-multiselect-selector-pane {
+  min-width: 0;
+}
+
+.object-multiselect-selected {
+  min-height: 38px;
+  padding: 6px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-sm);
+  background: #f8fafc;
+}
+
+.object-multiselect-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 180px;
+  overflow-y: auto;
+  margin-top: 6px;
+}
+
+.object-multiselect-option {
+  text-align: left;
+  padding: 7px 10px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-sm);
+  background: #ffffff;
+  color: var(--praesidium-text);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.object-multiselect-option:hover {
+  background: #eef6ff;
+  border-color: var(--praesidium-border-strong);
+}
+
+.modal-chip-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-multiselect-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.modal-multiselect-row .modal-input {
+  flex: 1;
+}
+
+.modal-multiselect-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.multiselect-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--praesidium-border-strong);
+  background: #eef6ff;
+  color: var(--praesidium-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.multiselect-chip-remove {
+  border: 0;
+  background: transparent;
+  color: #9b1c1c;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.pf-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.pf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.pf-table th,
+.pf-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--praesidium-border);
+  border-right: 1px solid var(--praesidium-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.pf-table th {
+  background: var(--praesidium-bg-soft);
+  color: var(--praesidium-text);
+  font-weight: 700;
+}
+
+.pf-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.pf-status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--praesidium-accent-soft);
+  color: var(--praesidium-accent);
+}
+
+.pf-status-pill.ok,
+.pf-status-pill.active,
+.pf-status-pill.on {
+  background: rgba(20, 128, 94, 0.13);
+  color: var(--praesidium-success);
+}
+
+.pf-status-pill.error,
+.pf-status-pill.failed,
+.pf-status-pill.inactive,
+.pf-status-pill.off {
+  background: rgba(194, 65, 59, 0.13);
+  color: var(--praesidium-danger);
+}
+
+.pf-alert {
+  padding: 12px 14px;
+  border-radius: var(--praesidium-radius-sm);
+  border: 1px solid var(--praesidium-border);
+  background: var(--praesidium-bg-soft);
+}
+
+.pf-alert.error {
+  border-color: rgba(194, 65, 59, 0.35);
+  background: rgba(194, 65, 59, 0.08);
+  color: var(--praesidium-danger);
+}
+
+.pf-pre {
+  max-height: 380px;
+  overflow: auto;
+  padding: 14px;
+  border-radius: var(--praesidium-radius-sm);
+  background: #0b1726;
+  color: #f7fafc;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .pf-page-header {
+    flex-direction: column;
+  }
+}
+
+.pf-dashboard-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-sm);
+  background: var(--praesidium-bg-soft);
+}
+
+.pf-dashboard-status #dashboard-refresh-status[data-mode="ok"] {
+  color: var(--praesidium-success);
+  font-weight: 700;
+}
+
+.pf-dashboard-status #dashboard-refresh-status[data-mode="error"] {
+  color: var(--praesidium-danger);
+  font-weight: 700;
+}
+
+.pf-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pf-dashboard-panel {
+  padding: 16px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-md);
+  background: var(--praesidium-bg-panel);
+  box-shadow: var(--praesidium-shadow-sm);
+}
+
+.pf-dashboard-panel-wide {
+  grid-column: span 2;
+}
+
+.pf-dashboard-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.pf-dashboard-panel-head h3 {
+  margin: 0;
+}
+
+.pf-dashboard-panel-head strong {
+  color: var(--praesidium-accent);
+  font-size: 18px;
+}
+
+.pf-dashboard-chart {
+  height: 260px;
+  min-height: 220px;
+}
+
+.pf-dashboard-chart-cpu {
+  height: 260px;
+}
+
+.pf-dashboard-core-list,
+.pf-dashboard-mounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.pf-dashboard-core-pill,
+.pf-dashboard-mount {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-sm);
+  background: var(--praesidium-bg-soft);
+}
+
+.pf-dashboard-core-pill div,
+.pf-dashboard-mount div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pf-dashboard-core-pill em,
+.pf-dashboard-mount em {
+  display: block;
+  height: 6px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.18);
+}
+
+.pf-dashboard-core-pill em {
+  background: var(--praesidium-accent);
+}
+
+.pf-dashboard-kv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.pf-dashboard-kv div {
+  padding: 10px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-sm);
+  background: var(--praesidium-bg-soft);
+}
+
+.pf-dashboard-kv span {
+  display: block;
+  color: var(--praesidium-text-soft);
+  font-size: 12px;
+}
+
+.pf-dashboard-kv strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--praesidium-text);
+}
+
+.pf-dashboard-kv-large {
+  grid-template-columns: 1fr;
+}
+
+.pf-dashboard-progress {
+  height: 12px;
+  margin: 14px 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(148, 163, 184, 0.18);
+}
+
+.pf-dashboard-progress span {
+  display: block;
+  width: 1%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--praesidium-success);
+}
+
+.pf-dashboard-progress span[data-status="warning"] {
+  background: #ffbe0b;
+}
+
+.pf-dashboard-progress span[data-status="critical"] {
+  background: var(--praesidium-danger);
+}
+
+.pf-dashboard-mount p,
+.pf-dashboard-mount small {
+  display: block;
+  margin: 6px 0 0;
+  color: var(--praesidium-text-soft);
+}
+
+.pf-dashboard-mount em i {
+  display: block;
+  width: 1%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--praesidium-accent);
+}
+
+.pf-dashboard-mount[data-status="warning"] em i {
+  background: #ffbe0b;
+}
+
+.pf-dashboard-mount[data-status="critical"] em i {
+  background: var(--praesidium-danger);
+}
+
+@media (max-width: 900px) {
+  .pf-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pf-dashboard-panel-wide {
+    grid-column: auto;
+  }
+}
+
+.main-content:has(.pf-dashboard) {
+  background: #0b1726;
+  color: #f7fafc;
+  border-color: rgba(90, 169, 230, 0.28);
+}
+
+.main-content:has(.pf-dashboard) .pf-page-title h2,
+.main-content:has(.pf-dashboard) .pf-page-title p,
+.pf-dashboard,
+.pf-dashboard h3,
+.pf-dashboard strong {
+  color: #f7fafc;
+}
+
+.main-content:has(.pf-dashboard) .pf-muted,
+.pf-dashboard .pf-muted,
+.pf-dashboard-kv span,
+.pf-dashboard-mount p,
+.pf-dashboard-mount small {
+  color: rgba(226, 232, 240, 0.72);
+}
+
+.pf-dashboard-status,
+.pf-dashboard-panel,
+.pf-dashboard-core-pill,
+.pf-dashboard-mount,
+.pf-dashboard-kv div,
+.pf-dashboard .pf-table-wrap {
+  background: #111f33;
+  border-color: rgba(148, 163, 184, 0.22);
+  color: #f7fafc;
+}
+
+.pf-dashboard .pf-table th {
+  background: #16263d;
+  color: #f7fafc;
+}
+
+.pf-dashboard .pf-table td {
+  color: #f7fafc;
+  border-bottom-color: rgba(148, 163, 184, 0.18);
+}
+
+.pf-dashboard-panel-head strong,
+.pf-dashboard-core-pill strong,
+.pf-dashboard-mount span {
+  color: #5aa9e6;
+}
+
+.pf-dashboard-progress,
+.pf-dashboard-core-pill em,
+.pf-dashboard-mount em {
+  background: rgba(226, 232, 240, 0.14);
+}
+
+body:has(#app-view:not(.hidden)) {
+  display: block;
+  align-items: initial;
+  justify-content: initial;
+}
+
+body:has(#app-view:not(.hidden)) .app-view {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-content:has(.pf-dashboard) {
+  width: auto;
+  max-width: none;
+  margin-right: 0;
+  border-radius: 0;
+  border-right: 0;
+}
+
+.main-content:has(.pf-dashboard) .pf-dashboard {
+  width: 100%;
+}
+
+/* Dashboard legacy visual parity in FastAPI WebGUI */
+body:has(#app-view:not(.hidden)) {
+  display: block;
+  align-items: initial;
+  justify-content: initial;
+}
+
+body:has(#app-view:not(.hidden)) .app-view {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-content:has(.dashboard-shell) {
+  width: auto;
+  max-width: none;
+  margin-right: 0;
+  border-radius: 0;
+  border-right: 0;
+  background: #0b1726;
+  color: #f7fafc;
+  border-color: rgba(90, 169, 230, 0.28);
+}
+
+.main-content:has(.dashboard-shell) .dashboard-shell {
+  width: 100%;
+}
+
+.main-content:has(.dashboard-shell) .dashboard-header h2,
+.main-content:has(.dashboard-shell) .dashboard-header p {
+  color: #f7fafc;
+}
+
+.main-content:has(.dashboard-shell) .dashboard-header {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(15, 23, 42, 0.92));
+}
+
+.main-content:has(.dashboard-shell) .dashboard-disk-summary-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.main-content:has(.dashboard-shell) .dashboard-card canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ========================================================================== */
+/* Login viewport centering                                                   */
+/* Centrado del login en la ventana                                           */
+/*                                                                            */
+/* ES: Centra la cajita de login dentro del viewport real, con márgenes       */
+/*     simétricos arriba/abajo e izquierda/derecha y padding adaptable.       */
+/* EN: Centers the login box inside the real viewport, with symmetrical       */
+/*     top/bottom and left/right margins plus adaptive padding.               */
+/* ========================================================================== */
+.login-view:not(.hidden) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: clamp(18px, 4vh, 48px) clamp(18px, 4vw, 56px);
+  box-sizing: border-box;
+}
+
+.login-view:not(.hidden) .login-container {
+  flex: 0 1 360px;
+  width: min(360px, 100%);
+  max-width: 360px;
+  margin: 0;
+}
+
+/* ============================================================
+   ES: Filtros centralizados para tablas WebGUI.
+   EN: Centralized filters for WebGUI tables.
+   ============================================================ */
+.pf-table thead tr.generic-table-filter-row th {
+  padding: 7px 9px;
+  background: rgba(15, 23, 42, 0.74);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.pf-table th.generic-table-filter-actions {
+  min-width: 92px;
+}
+
+.pf-table input.generic-table-filter-input {
+  width: 100%;
+  min-width: 92px;
+  padding: 7px 9px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 8px;
+  color: #e5edf4;
+  background: rgba(15, 23, 42, 0.96);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  box-sizing: border-box;
+}
+
+.pf-table input.generic-table-filter-input:focus {
+  outline: none;
+  border-color: rgba(0, 188, 212, 0.76);
+  box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.18);
+}
+
+.pf-table .generic-table-no-results {
+  color: #9aa8b6;
+  font-style: italic;
+  text-align: center;
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.62);
+  backdrop-filter: blur(2px);
+}
+
+.modal-window {
+  width: min(92vw, 720px);
+  max-height: 84vh;
+  overflow: auto;
+  padding: 24px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-md);
+  background: var(--praesidium-bg-panel);
+  color: var(--praesidium-text);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+}
+
+.modal-window h3 {
+  margin: 0 0 18px;
+}
+
+.modal-input-group {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.modal-prefix {
+  font-weight: 700;
+  color: var(--praesidium-text-soft);
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.modal-input,
+.modal-input-group input[type="text"],
+.modal-input-group select {
+  width: 100%;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid var(--praesidium-border);
+  border-radius: var(--praesidium-radius-sm);
+  background: #ffffff;
+  color: var(--praesidium-text);
+}
+
+.modal-input-group span.modal-input {
+  display: inline-flex;
+  align-items: center;
+  background: var(--praesidium-bg-soft);
+}
+
+.modal-actions {
+  position: sticky;
+  bottom: -24px;
+  z-index: 2;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin: 18px -12px -12px;
+  padding: 14px 12px 12px;
+  background: linear-gradient(180deg, rgba(239, 246, 252, 0.82) 0%, rgba(226, 238, 248, 0.98) 100%);
+  border-top: 1px solid var(--praesidium-border);
+  backdrop-filter: blur(2px);
+}
+
+.modal-button.cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #94a3b8, #64748b);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .modal-input-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ES: El panel principal se expande con tablas anchas; el scroll horizontal debe ser el del navegador. */
+/* EN: The main panel expands with wide tables; horizontal scrolling must be handled by the browser. */
+body:has(#app-view:not(.hidden)) .main-content:not(:has(.pf-dashboard)):not(:has(.dashboard-shell)):has(.pf-card .pf-table-wrap) {
+  box-sizing: border-box;
+  width: max-content;
+  min-width: calc(100vw - 290px);
+  height: auto;
+  min-height: calc(100vh - 140px);
+  overflow: visible;
+  background: var(--praesidium-bg-panel);
+  background-clip: padding-box;
+}
+
+/* ES: El wrapper no crea scroll interno; sólo deja que la tabla ensanche el documento. */
+/* EN: The wrapper does not create internal scrolling; it lets the table widen the document. */
+body:has(#app-view:not(.hidden)) .main-content:not(:has(.pf-dashboard)):not(:has(.dashboard-shell)):has(.pf-card .pf-table-wrap) .pf-table-wrap {
+  display: block;
+  width: max-content;
+  max-width: none;
+  overflow: visible;
+  background: var(--praesidium-bg-panel);
+}
+
+body:has(#app-view:not(.hidden)) .main-content:not(:has(.pf-dashboard)):not(:has(.dashboard-shell)):has(.pf-card .pf-table-wrap) .pf-card:has(.pf-table-wrap) {
+  width: max-content;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ES: Evita que tablas con muchas columnas colapsen y rompan visualmente el contenedor. */
+/* EN: Prevents many-column tables from collapsing and visually breaking the container. */
+body:has(#app-view:not(.hidden)) .main-content:not(:has(.pf-dashboard)):not(:has(.dashboard-shell)):has(.pf-card .pf-table-wrap) .pf-table {
+  width: max-content;
+  min-width: 100%;
+  background: var(--praesidium-bg-panel);
+}
+
+/* ES: Si una tabla desborda horizontalmente, sus celdas conservan fondo propio. */
+/* EN: If a table overflows horizontally, its cells keep their own background. */
+body:has(#app-view:not(.hidden)) .main-content:not(:has(.pf-dashboard)):not(:has(.dashboard-shell)):has(.pf-card .pf-table-wrap) .pf-table td {
+  background: var(--praesidium-bg-panel);
+}
+
+/* ES: Texto oculto sólo visualmente; sigue presente para filtros de tabla. */
+/* EN: Visually hidden text; still present for table filters. */
+.table-readonly-filter-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.table-chip-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--praesidium-accent);
+  background: var(--praesidium-accent-soft);
+  color: var(--praesidium-accent);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.readonly-list-modal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 60vh;
+  overflow: auto;
+  padding: 6px 2px 12px;
+}
+

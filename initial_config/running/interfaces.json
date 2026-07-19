@@ -1,0 +1,36 @@
+{
+    "network": {
+        "version": "2",
+        "ethernets": {
+            "eth0": {
+                "match.macaddress": "6a:e4:a9:a1:c9:35",
+                "set-name": "eth0"
+            },
+            "ens19": {},
+            "ens20": {},
+            "ens21": {}
+        },
+        "bridges": {
+            "br0": {
+                "interfaces": "eth0",
+                "addresses": "192.0.2.10/24",
+                "nameservers.addresses": "1.1.1.1",
+                "nameservers.search": "int",
+                "routes": "{'to': 'default', 'via': '192.0.2.1'}"
+            },
+            "br1": {
+                "interfaces": "ens19"
+            },
+            "br2": {
+                "interfaces": "ens20"
+            },
+            "br3": {
+                "interfaces": "ens21"
+            }
+        },
+        "wifis": {},
+        "bonds": {},
+        "vlans": {},
+        "wireguard": {}
+    }
+}

@@ -1,0 +1,68 @@
+{
+  "wireguard_clients": {
+    "list": {
+      "method": "GET",
+      "path": "/wireguard/remote-clients"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/wireguard/remote-clients"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/wireguard/remote-clients/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/wireguard/remote-clients/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "menu.wireguard_clients",
+      "description_key": "wireguard.clients_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "rows_key": "entries",
+      "payload_wrapper": "rule",
+      "payload_fields": [
+        "name",
+        "enabled",
+        "vpn",
+        "client_vpn_ip",
+        "client_private_key",
+        "client_public_key",
+        "allowed_ips",
+        "keepalive"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "wireguard",
+      "loading_key": "wireguard.loading",
+      "empty_key": "wireguard.empty"
+    },
+    "button_actions": {
+      "download_config": {
+        "method": "GET",
+        "path": "/wireguard/remote-clients/{uuid}/config",
+        "params": [
+          "uuid"
+        ],
+        "response_type": "download",
+        "label_key": "wireguard.download_config"
+      },
+      "download_qr": {
+        "method": "GET",
+        "path": "/wireguard/remote-clients/{uuid}/qr",
+        "params": [
+          "uuid"
+        ],
+        "response_type": "download",
+        "label_key": "wireguard.download_qr"
+      }
+    }
+  }
+}

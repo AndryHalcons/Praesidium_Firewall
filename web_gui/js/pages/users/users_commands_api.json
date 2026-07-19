@@ -1,0 +1,42 @@
+{
+    "table_users": {
+        "list": {
+            "method": "GET",
+            "path": "/users/"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/users/{user_uuid}",
+            "params": [
+                "user_uuid"
+            ]
+        },
+        "delete": {
+            "method": "DELETE",
+            "path": "/users/{user_uuid}",
+            "params": [
+                "user_uuid"
+            ]
+        },
+        "table": {
+            "title_key": "users.title",
+            "description_key": "users.description",
+            "row_key": "UUID",
+            "context_key": "user_uuid",
+            "rows_key": "users",
+            "payload_fields": [
+                "user_name",
+                "user_role",
+                "user_language",
+                "force_password_change"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "users",
+            "loading_key": "users.loading",
+            "empty_key": "users.empty",
+            "disable_buttons": [
+                "add"
+            ]
+        }
+    }
+}

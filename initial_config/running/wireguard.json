@@ -1,0 +1,118 @@
+{
+  "remote_access": {
+    "wgserv-1-19700101000000000-2331": {
+      "UUID": "wgserv-1-19700101000000000-2331",
+      "dns": [
+        "1.1.1.1"
+      ],
+      "enabled": "true",
+      "id": "1",
+      "interface": "wgwebsrv",
+      "internal_networks": [
+        "192.168.70.0/24"
+      ],
+      "listen_port": [
+        "aliaser-3-19700101000000000-4190"
+      ],
+      "mtu": "1420",
+      "name": "WebGUI-Server-Demo",
+      "private_key": "gIKo8RlC158742J7RPcEnzqNybm7bbjp6+blcJObL0I=",
+      "public_endpoint": [
+        "vpn-webgui.example.com"
+      ],
+      "server_vpn_ip": [
+        "10.70.0.1/24"
+      ],
+      "vpn_network": [
+        "10.70.0.0/24"
+      ]
+    },
+    "wgserv-2-19700101000000000-1062": {
+      "UUID": "wgserv-2-19700101000000000-1062",
+      "dns": "8.8.8.8",
+      "enabled": "true",
+      "id": "2",
+      "interface": "wgapisrv",
+      "internal_networks": "192.168.100.0/24",
+      "listen_port": "52004",
+      "mtu": "1420",
+      "name": "API-Server-Demo",
+      "private_key": "0DURl7Ormfkk10IRkjxldQdxTqAE0nc1UjQgd7H3h3g=",
+      "public_endpoint": "vpn-api.example.com",
+      "server_vpn_ip": "10.100.0.1/24",
+      "vpn_network": "10.100.0.0/24"
+    }
+  },
+  "remote_clients": {
+    "wgclient-1-19700101000000000-1752": {
+      "UUID": "wgclient-1-19700101000000000-1752",
+      "allowed_ips": "0.0.0.0/0",
+      "client_private_key": "uEpqQGMeRo4QJ0x5G2855Ax/2XIJyEEw+ev6WBSuU1M=",
+      "client_public_key": "cfd7TTjyBeLSjIS1i/3DaC4eDAPBbjLfY8b0bZASNQs=",
+      "client_vpn_ip": "10.70.0.10/32",
+      "enabled": "true",
+      "id": "1",
+      "keepalive": "25",
+      "name": "WebGUI-Client-Demo",
+      "vpn": "wgserv-1-19700101000000000-2331"
+    },
+    "wgclient-2-19700101000000000-4197": {
+      "UUID": "wgclient-2-19700101000000000-4197",
+      "allowed_ips": "0.0.0.0/0",
+      "client_private_key": "cDSepg4Lb8c9zuOuSRapZ2RNIV6VuNeYms0Smvp8sEw=",
+      "client_public_key": "rPZ/Q45sDMqgW5lNg4kASYqVBcOVvH9lZNJtbmQkKl4=",
+      "client_vpn_ip": "10.100.0.10/32",
+      "enabled": "true",
+      "id": "2",
+      "keepalive": "25",
+      "name": "API-Client-Demo",
+      "vpn": "wgserv-2-19700101000000000-1062"
+    }
+  },
+  "site_to_site": {
+    "wgsite-1-19700101000000000-0310": {
+      "UUID": "wgsite-1-19700101000000000-0310",
+      "enabled": "true",
+      "id": "1",
+      "interface": "wgwebs2s",
+      "keepalive": "25",
+      "listen_port": [
+        "52001"
+      ],
+      "local_networks": [
+        "10.50.0.0/16"
+      ],
+      "local_tunnel_ip": [
+        "172.31.50.1/30"
+      ],
+      "mtu": "1420",
+      "name": "WebGUI-S2S-Demo",
+      "private_key": "APxd+6e6mUsFsTGZqc2s6o+4KaxASZOusrgv7FjGv3Q=",
+      "remote_endpoint": "198.51.100.10:52001",
+      "remote_networks": [
+        "10.60.0.0/16"
+      ],
+      "remote_public_key": "IWYCIqnorZ9RKN6JqeZpByLVzoMijUiVOuD1HfJ/mz4=",
+      "remote_tunnel_ip": [
+        "172.31.50.2/30"
+      ]
+    },
+    "wgsite-2-19700101000000000-2730": {
+      "UUID": "wgsite-2-19700101000000000-2730",
+      "enabled": "true",
+      "id": "2",
+      "interface": "wgapis2s",
+      "keepalive": "25",
+      "listen_port": "52003",
+      "local_networks": "10.80.0.0/16",
+      "local_tunnel_ip": "172.31.80.1/30",
+      "mtu": "1420",
+      "name": "API-S2S-Demo",
+      "private_key": "eOhtLtg445e+b01uM0Uid6IuPbvhDtCYZwv80au3VGY=",
+      "remote_endpoint": "198.51.100.20:52003",
+      "remote_networks": "10.90.0.0/16",
+      "remote_public_key": "vzC8YAtHPMZBljTDRnWZi3MiocL4lEN8f5yKWEfkXmQ=",
+      "remote_tunnel_ip": "172.31.80.2/30"
+    }
+  }
+}

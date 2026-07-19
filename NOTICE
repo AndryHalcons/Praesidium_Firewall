@@ -1,0 +1,5 @@
+PraesidiumFirewall Beta Notice
+
+PraesidiumFirewall is beta-stage firewall management software. Review the source, installer, permissions, and generated system configuration before using it on production systems.
+
+This repository may include third-party components and generated example certificates for development/testing. Replace development material before deployment.

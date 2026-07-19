@@ -1,0 +1,121 @@
+{
+    "nftables_postrouting": {
+        "select": {
+            "ip.protocol": [
+                "",
+                "tcp",
+                "udp",
+                "tcp, udp",
+                "icmp",
+                "icmpv6"
+            ],
+            "ct.state": [
+                "",
+                "new",
+                "related",
+                "established",
+                "established, related",
+                "new, related",
+                "new, established",
+                "new, related, established"
+            ]
+        },
+        "select_list": {
+            "meta.oifname": [
+                "GET /api/v1/interfaces/ethernets",
+                "GET /api/v1/interfaces/bridges",
+                "GET /api/v1/interfaces/bonds",
+                "GET /api/v1/interfaces/vlans",
+                "GET /api/v1/interfaces/wifis"
+            ]
+        },
+        "object_multiselect": {
+            "ip.saddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "ip.daddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "sport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "dport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "snat.addr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "tooltip_fields": {
+            "ip.saddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "ip.daddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "sport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "dport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "snat.addr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "checkbox": {
+            "ip.saddr.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "ip.daddr.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "sport.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "dport.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "log": {
+                "checked": "true",
+                "unchecked": "false"
+            },
+            "enable": {
+                "checked": "true",
+                "unchecked": "false"
+            },
+            "masquerade": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "family": [
+                "inet"
+            ],
+            "table": [
+                "nat"
+            ],
+            "chain": [
+                "POSTROUTING"
+            ],
+            "id": [
+                "1-10000"
+            ]
+        }
+    }
+}

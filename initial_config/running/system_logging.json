@@ -1,0 +1,27 @@
+{
+    "journald": {
+        "uuid":"jourlog-1-19700101000000000-3806",
+        "system_max_use": "100M",
+        "system_keep_free": "1G",
+        "runtime_max_use": "50M",
+        "max_retention_sec": "7day",
+        "compress": true
+    },
+    "system_logs": {
+        "uuid":"systlog-1-19700101000000000-3806",
+        "enabled": true,
+        "rotation": "daily",
+        "rotate": 7,
+        "maxsize": "100M",
+        "compress": true,
+        "delaycompress": true
+    },
+    "nftables_logs": {
+        "uuid":"nftlogs-1-19700101000000000-3806",
+        "enabled": true,
+        "size": "50M",
+        "rotate": 7,
+        "compress": true,
+        "delaycompress": true
+    }
+}

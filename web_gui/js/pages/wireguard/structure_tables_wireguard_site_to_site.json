@@ -1,0 +1,18 @@
+{
+  "wireguard_site_to_site": [
+    "id",
+    "name",
+    "enabled",
+    "interface",
+    "local_tunnel_ip",
+    "remote_tunnel_ip",
+    "local_networks",
+    "remote_networks",
+    "listen_port",
+    "remote_endpoint",
+    "private_key",
+    "remote_public_key",
+    "keepalive",
+    "mtu"
+  ]
+}

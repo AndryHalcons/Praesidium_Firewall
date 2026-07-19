@@ -1,0 +1,76 @@
+{
+  "dnsmasq_scopes": {
+    "select": {
+      "mode": [
+        "server",
+        "relay"
+      ]
+    },
+    "select_list": {
+      "interface": [
+        "GET /api/v1/dnsmasq/interfaces"
+      ]
+    },
+    "checkbox": {
+      "enable": {
+        "checked": "true",
+        "unchecked": "false"
+      }
+    },
+    "not_editable": {
+      "id": []
+    },
+    "object_multiselect": {
+      "range_start": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "range_end": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "gateway": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "dns_primary": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "dns_secondary": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "ntp_server": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "relay_local_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "relay_dest_server": [
+        "GET /api/v1/alias-ip/addresses"
+      ]
+    },
+    "tooltip_fields": {
+      "range_start": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "range_end": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "gateway": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "dns_primary": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "dns_secondary": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "ntp_server": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "relay_local_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "relay_dest_server": [
+        "GET /api/v1/alias-ip/addresses"
+      ]
+    }
+  }
+}
