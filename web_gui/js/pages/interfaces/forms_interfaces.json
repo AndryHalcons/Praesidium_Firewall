@@ -1,0 +1,622 @@
+{
+    "ethernets": {
+        "select_list": {},
+        "object_multiselect": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "tooltip_fields": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "checkbox": {
+            "dhcp4": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "optional": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "accept-ra": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "wakeonlan": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-dns": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-routes": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.send-hostname": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-hostname": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6-overrides.use-dns": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6-overrides.use-routes": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "ipv6-privacy": {
+                "checked": "True",
+                "unchecked": "False"
+            }
+        },
+        "not_editable": {}
+    },
+    "bridges": {
+        "select_list": {
+            "interfaces": [
+                "GET /api/v1/interfaces/ethernets",
+                "GET /api/v1/interfaces/bonds",
+                "GET /api/v1/interfaces/wifis"
+            ]
+        },
+        "object_multiselect": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "tooltip_fields": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "checkbox": {
+            "dhcp4": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "optional": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "accept-ra": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "parameters.stp": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-dns": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-routes": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.send-hostname": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-hostname": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6-overrides.use-dns": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6-overrides.use-routes": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "ipv6-privacy": {
+                "checked": "True",
+                "unchecked": "False"
+            }
+        },
+        "not_editable": {}
+    },
+    "bonds": {
+        "select": {
+            "parameters.mode": [
+                "",
+                "balance-rr",
+                "active-backup",
+                "balance-xor",
+                "broadcast",
+                "802.3ad",
+                "balance-tlb",
+                "balance-alb"
+            ],
+            "parameters.lacp-rate": [
+                "",
+                "slow",
+                "fast"
+            ],
+            "parameters.transmit-hash-policy": [
+                "",
+                "layer2",
+                "layer3+4",
+                "layer2+3",
+                "encap2+3",
+                "encap3+4"
+            ]
+        },
+        "object_multiselect": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "tooltip_fields": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "checkbox": {
+            "dhcp4": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "ipv6-privacy": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {},
+        "select_dynamic": {
+            "interfaces": [
+                "GET /api/v1/interfaces/ethernets",
+                "GET /api/v1/interfaces/bridges"
+            ]
+        }
+    },
+    "vlans": {
+        "select_list": {
+            "link": [
+                "GET /api/v1/interfaces/ethernets",
+                "GET /api/v1/interfaces/bridges",
+                "GET /api/v1/interfaces/bonds"
+            ]
+        },
+        "object_multiselect": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "tooltip_fields": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "checkbox": {
+            "dhcp4": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "ipv6-privacy": {
+                "checked": "True",
+                "unchecked": "False"
+            }
+        },
+        "not_editable": {}
+    },
+    "wifis": {
+        "select_list": {},
+        "object_multiselect": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "tooltip_fields": {
+            "addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway4": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "gateway6": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "nameservers.addresses": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routes.via": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "local": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "remote": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.allowed-ips": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "peers.endpoint": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.from": [
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "routing-policy.to": [
+                "GET /api/v1/alias-ip/addresses"
+            ]
+        },
+        "checkbox": {
+            "dhcp4": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "optional": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "accept-ra": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "wakeonlan": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-dns": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-routes": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.send-hostname": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp4-overrides.use-hostname": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6-overrides.use-dns": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "dhcp6-overrides.use-routes": {
+                "checked": "True",
+                "unchecked": "False"
+            },
+            "ipv6-privacy": {
+                "checked": "True",
+                "unchecked": "False"
+            }
+        },
+        "not_editable": {}
+    }
+}

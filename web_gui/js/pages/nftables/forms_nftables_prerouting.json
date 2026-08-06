@@ -1,0 +1,133 @@
+{
+    "nftables_prerouting": {
+        "select": {
+            "ip.protocol": [
+                "",
+                "tcp",
+                "udp",
+                "tcp, udp",
+                "icmp",
+                "icmpv6"
+            ],
+            "ct.state": [
+                "",
+                "new",
+                "related",
+                "established",
+                "established, related",
+                "new, related",
+                "new, established",
+                "new, related, established"
+            ]
+        },
+        "select_list": {
+            "meta.iifname": [
+                "GET /api/v1/interfaces/ethernets",
+                "GET /api/v1/interfaces/bridges",
+                "GET /api/v1/interfaces/bonds",
+                "GET /api/v1/interfaces/vlans",
+                "GET /api/v1/interfaces/wifis"
+            ]
+        },
+        "object_multiselect": {
+            "ip.saddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "ip.daddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "sport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "dport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "dnat.addr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "dnat.port": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "redirect": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ]
+        },
+        "tooltip_fields": {
+            "ip.saddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "ip.daddr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "sport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "dport": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "dnat.addr": [
+                "GET /api/v1/alias-ip/address-groups",
+                "GET /api/v1/alias-ip/addresses"
+            ],
+            "dnat.port": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ],
+            "redirect": [
+                "GET /api/v1/alias-services/service-groups",
+                "GET /api/v1/alias-services/services"
+            ]
+        },
+        "checkbox": {
+            "ip.saddr.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "ip.daddr.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "sport.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "dport.op": {
+                "checked": "!=",
+                "unchecked": "=="
+            },
+            "log": {
+                "checked": "true",
+                "unchecked": "false"
+            },
+            "enable": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "family": [
+                "inet"
+            ],
+            "table": [
+                "nat"
+            ],
+            "chain": [
+                "PREROUTING"
+            ],
+            "id": [
+                "1-10000"
+            ]
+        }
+    }
+}

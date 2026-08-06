@@ -1,0 +1,19 @@
+{
+  "certificates": {
+    "not_editable": {
+      "type": [],
+      "file_name": [],
+      "name": [],
+      "subject": [],
+      "issuer": [],
+      "expires": [],
+      "status": [],
+      "algorithm": []
+    },
+    "button": {
+      "downloads": [
+        "download_certificate"
+      ]
+    }
+  }
+}

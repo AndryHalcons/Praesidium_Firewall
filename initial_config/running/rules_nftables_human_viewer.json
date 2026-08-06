@@ -1,0 +1,739 @@
+{
+    "nftables": [
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "FORWARDING",
+                "id": "5",
+                "UUID": "nft-5-19700101000000000-5834",
+                "position": 1,
+                "action": "accept",
+                "enable": "true",
+                "name": "Lan traffic  Tcp & udp forwarding permit",
+                "ip.protocol": "tcp, udp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "==",
+                "ip.daddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "FORWARDING",
+                "id": "8",
+                "UUID": "nft-8-19700101000000000-1336",
+                "position": 2,
+                "action": "accept",
+                "enable": "true",
+                "name": "Lan traffic ICMP forwarding accept",
+                "ip.protocol": "icmp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "==",
+                "ip.daddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "FORWARDING",
+                "id": "13",
+                "UUID": "nft-13-19700101000000000-8410",
+                "position": 3,
+                "action": "accept",
+                "enable": "true",
+                "name": "Navigation Internet Tcp & udp forwarding permit",
+                "ip.protocol": "tcp, udp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "!=",
+                "ip.daddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "FORWARDING",
+                "id": "15",
+                "UUID": "nft-15-19700101000000000-4702",
+                "position": 4,
+                "action": "accept",
+                "enable": "true",
+                "name": "Navigation Internet ICMP forwarding accept",
+                "ip.protocol": "icmp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "!=",
+                "ip.daddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "FORWARDING",
+                "id": "11",
+                "UUID": "nft-11-19700101000000000-8647",
+                "position": 5,
+                "action": "drop",
+                "enable": "true",
+                "name": "",
+                "ip.protocol": "tcp, udp",
+                "ip.saddr.op": "",
+                "ip.saddr": "",
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "",
+                "ip.daddr": "",
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "FORWARDING",
+                "id": "14",
+                "UUID": "nft-14-19700101000000000-1529",
+                "position": 6,
+                "action": "drop",
+                "enable": "true",
+                "name": "",
+                "ip.protocol": "icmp",
+                "ip.saddr.op": "",
+                "ip.saddr": "",
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "",
+                "ip.daddr": "",
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "nat",
+                "chain": "PREROUTING",
+                "id": "1",
+                "UUID": "nft-1-19700101000000000-4926",
+                "position": 1,
+                "action": "",
+                "enable": "true",
+                "name": "ping my server example",
+                "ip.protocol": "icmp",
+                "ip.saddr.op": "!=",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "==",
+                "ip.daddr": [
+                    "192.168.1.1"
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": [
+                    "10.0.50.10"
+                ],
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "nat",
+                "chain": "PREROUTING",
+                "id": "2",
+                "UUID": "nft-2-19700101000000000-4379",
+                "position": 2,
+                "action": "",
+                "enable": "true",
+                "name": "my web server example",
+                "ip.protocol": "tcp",
+                "ip.saddr.op": "!=",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "==",
+                "ip.daddr": [
+                    "192.168.1.1/32"
+                ],
+                "dport.op": "==",
+                "dport": [
+                    "443"
+                ],
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": [
+                    "10.0.50.10"
+                ],
+                "dnat.port": [
+                    "443"
+                ],
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "nat",
+                "chain": "PREROUTING",
+                "id": "3",
+                "UUID": "nft-3-19700101000000000-1785",
+                "position": 3,
+                "action": "",
+                "enable": "true",
+                "name": "my vpn server example",
+                "ip.protocol": "udp",
+                "ip.saddr.op": "!=",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "==",
+                "ip.daddr": [
+                    "192.168.1.1"
+                ],
+                "dport.op": "==",
+                "dport": [
+                    "1194"
+                ],
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": [
+                    "10.0.50.10"
+                ],
+                "dnat.port": [
+                    "1194"
+                ],
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "nat",
+                "chain": "POSTROUTING",
+                "id": "4",
+                "UUID": "nft-4-19700101000000000-7382",
+                "position": 1,
+                "action": "",
+                "enable": "true",
+                "name": "NAT Internet TCP & UDP",
+                "ip.protocol": "tcp, udp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "!=",
+                "ip.daddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "true",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "nat",
+                "chain": "POSTROUTING",
+                "id": "6",
+                "UUID": "nft-6-19700101000000000-7409",
+                "position": 2,
+                "action": "",
+                "enable": "true",
+                "name": "NAT Internet Ping",
+                "ip.protocol": "icmp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "!=",
+                "ip.daddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "true",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "input",
+                "id": "7",
+                "UUID": "nft-7-19700101000000000-3866",
+                "position": 1,
+                "action": "accept",
+                "enable": "true",
+                "name": "Management  TCP & UDP",
+                "ip.protocol": "tcp, udp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "==",
+                "ip.daddr": [
+                    {
+                        "id": 2,
+                        "UUID": "aliasad-2-19700101000000000-1994",
+                        "name": "Management",
+                        "content": [
+                            "192.168.100.201"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "input",
+                "id": "9",
+                "UUID": "nft-9-19700101000000000-8724",
+                "position": 2,
+                "action": "accept",
+                "enable": "true",
+                "name": "Management Ping",
+                "ip.protocol": "icmp",
+                "ip.saddr.op": "==",
+                "ip.saddr": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "==",
+                "ip.daddr": [
+                    {
+                        "id": 2,
+                        "UUID": "aliasad-2-19700101000000000-1994",
+                        "name": "Management",
+                        "content": [
+                            "192.168.100.201"
+                        ]
+                    }
+                ],
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "output",
+                "id": "10",
+                "UUID": "nft-10-19700101000000000-8638",
+                "position": 1,
+                "action": "accept",
+                "enable": "true",
+                "name": "Management tcp & udp access",
+                "ip.protocol": "tcp, udp",
+                "ip.saddr.op": "",
+                "ip.saddr": "",
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "",
+                "ip.daddr": "",
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        },
+        {
+            "rule": {
+                "family": "inet",
+                "table": "filter",
+                "chain": "output",
+                "id": "12",
+                "UUID": "nft-12-19700101000000000-4612",
+                "position": 2,
+                "action": "accept",
+                "enable": "true",
+                "name": "Management ping access",
+                "ip.protocol": "icmp",
+                "ip.saddr.op": "",
+                "ip.saddr": "",
+                "sport.op": "",
+                "sport": "",
+                "ip.daddr.op": "",
+                "ip.daddr": "",
+                "dport.op": "",
+                "dport": "",
+                "meta.iifname": "",
+                "meta.oifname": "",
+                "ct.state": "",
+                "packets": "",
+                "bytes": "",
+                "log": "true",
+                "snat.addr": "",
+                "masquerade": "",
+                "snat.port": "",
+                "dnat.addr": "",
+                "dnat.port": "",
+                "redirect": ""
+            }
+        }
+    ]
+}

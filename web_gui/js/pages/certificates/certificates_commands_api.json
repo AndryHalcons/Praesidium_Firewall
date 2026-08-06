@@ -1,0 +1,41 @@
+{
+  "certificates": {
+    "list": {
+      "method": "GET",
+      "path": "/certificates"
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/certificates/{file_name}",
+      "params": [
+        "file_name"
+      ]
+    },
+    "button_actions": {
+      "download_certificate": {
+        "method": "GET",
+        "path": "/certificates/{file_name}/download",
+        "params": [
+          "file_name"
+        ],
+        "response_type": "download",
+        "label_key": "certificates.download"
+      }
+    },
+    "table": {
+      "title_key": "menu.certificates",
+      "description_key": "certificates.description",
+      "row_key": "file_name",
+      "context_key": "file_name",
+      "rows_key": "certificates",
+      "readonly_chips": true,
+      "column_label_prefix": "certificates",
+      "loading_key": "certificates.loading",
+      "empty_key": "certificates.empty",
+      "disable_buttons": [
+        "add",
+        "edit"
+      ]
+    }
+  }
+}

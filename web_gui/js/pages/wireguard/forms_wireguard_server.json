@@ -1,0 +1,58 @@
+{
+  "wireguard_server": {
+    "select": {},
+    "checkbox": {
+      "enabled": {
+        "checked": "true",
+        "unchecked": "false"
+      }
+    },
+    "not_editable": {
+      "id": []
+    },
+    "object_multiselect": {
+      "server_vpn_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "vpn_network": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "listen_port": [
+        "GET /api/v1/alias-services/services"
+      ],
+      "public_endpoint": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "internal_networks": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "dns": [
+        "GET /api/v1/alias-ip/addresses"
+      ]
+    },
+    "tooltip_fields": {
+      "server_vpn_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "vpn_network": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "listen_port": [
+        "GET /api/v1/alias-services/services"
+      ],
+      "public_endpoint": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "internal_networks": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "dns": [
+        "GET /api/v1/alias-ip/addresses"
+      ]
+    }
+  }
+}

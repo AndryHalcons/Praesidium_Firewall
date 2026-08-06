@@ -1,0 +1,19 @@
+{
+  "dnsmasq_scopes": [
+    "id",
+    "name",
+    "enable",
+    "mode",
+    "interface",
+    "range_start",
+    "range_end",
+    "lease_time",
+    "gateway",
+    "netmask",
+    "dns_primary",
+    "dns_secondary",
+    "ntp_server",
+    "relay_local_ip",
+    "relay_dest_server"
+  ]
+}

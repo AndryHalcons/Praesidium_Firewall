@@ -1,0 +1,64 @@
+{
+    "nftables_prerouting": {
+        "list": {
+            "method": "GET",
+            "path": "/nftables/nat/PREROUTING"
+        },
+        "create": {
+            "method": "POST",
+            "path": "/nftables/nat/PREROUTING"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/nftables/nat/PREROUTING/{rule_id}",
+            "params": [
+                "rule_id"
+            ]
+        },
+        "delete": {
+            "method": "DELETE",
+            "path": "/nftables/nat/PREROUTING/{rule_id}",
+            "params": [
+                "rule_id"
+            ]
+        },
+        "table": {
+            "title_key": "menu.nftables_prerouting",
+            "description_key": "nftables.prerouting_description",
+            "row_key": "id",
+            "context_key": "rule_id",
+            "rows_key": "rules",
+            "payload_wrapper": "rule",
+            "payload_fields": [
+                "family",
+                "table",
+                "chain",
+                "id",
+                "position",
+                "enable",
+                "name",
+                "ip.protocol",
+                "ip.saddr.op",
+                "ip.saddr",
+                "sport.op",
+                "sport",
+                "ip.daddr.op",
+                "ip.daddr",
+                "dport.op",
+                "dport",
+                "meta.iifname",
+                "ct.state",
+                "packets",
+                "bytes",
+                "log",
+                "dnat.addr",
+                "dnat.port",
+                "redirect"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "nftables",
+            "loading_key": "nftables.loading",
+            "empty_key": "nftables.empty"
+        }
+    }
+}

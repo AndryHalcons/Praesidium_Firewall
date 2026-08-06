@@ -1,0 +1,7 @@
+{
+    "table_management_allowed_sources": [
+        "id",
+        "source_cidr",
+        "description"
+    ]
+}

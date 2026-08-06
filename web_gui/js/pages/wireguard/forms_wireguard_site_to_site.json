@@ -1,0 +1,52 @@
+{
+  "wireguard_site_to_site": {
+    "select": {},
+    "checkbox": {
+      "enabled": {
+        "checked": "true",
+        "unchecked": "false"
+      }
+    },
+    "not_editable": {
+      "id": []
+    },
+    "object_multiselect": {
+      "local_tunnel_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "remote_tunnel_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "local_networks": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "remote_networks": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "listen_port": [
+        "GET /api/v1/alias-services/services"
+      ]
+    },
+    "tooltip_fields": {
+      "local_tunnel_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "remote_tunnel_ip": [
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "local_networks": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "remote_networks": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "listen_port": [
+        "GET /api/v1/alias-services/services"
+      ]
+    }
+  }
+}

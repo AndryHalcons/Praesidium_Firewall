@@ -1,0 +1,130 @@
+{
+    "bpfilter": [
+        {
+            "rule": {
+                "id": "4",
+                "UUID": "bpf-4-19700101000000000-3978",
+                "hook": "BF_HOOK_XDP",
+                "chain": "",
+                "position": 1,
+                "action": "ACCEPT",
+                "enable": "false",
+                "name": "reglaprueba2",
+                "interface": "br0",
+                "l3_protocol": "IPv4",
+                "l4_protocol": "TCP",
+                "source": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport": "",
+                "destination": "1.1.1.1",
+                "dport": "",
+                "tcp_flags": "",
+                "ipv6_next_header": "",
+                "icmp_type": "",
+                "icmp_code": "",
+                "icmpv6_type": "",
+                "icmpv6_code": "",
+                "probability": ""
+            }
+        },
+        {
+            "rule": {
+                "id": "1",
+                "UUID": "bpf-1-19700101000000000-9249",
+                "hook": "BF_HOOK_XDP",
+                "chain": "br0_bf_hook_xdp",
+                "position": 1,
+                "action": "DROP",
+                "enable": "true",
+                "name": "XDPname1",
+                "interface": "br0",
+                "l3_protocol": "IPv4",
+                "l4_protocol": "ICMP",
+                "source": [
+                    {
+                        "id": 1,
+                        "UUID": "aliagroup-1-19700101000000000-1659",
+                        "name": "Private-networks",
+                        "content": [
+                            "aliasad-5-19700101000000000-5352",
+                            "aliasad-6-19700101000000000-6352",
+                            "aliasad-7-19700101000000000-9017"
+                        ]
+                    }
+                ],
+                "sport": "",
+                "destination": "8.8.8.8",
+                "dport": "",
+                "tcp_flags": "",
+                "ipv6_next_header": "",
+                "icmp_type": "",
+                "icmp_code": "",
+                "icmpv6_type": "",
+                "icmpv6_code": "",
+                "probability": ""
+            }
+        },
+        {
+            "rule": {
+                "id": "2",
+                "UUID": "bpf-2-19700101000000000-0954",
+                "hook": "BF_HOOK_TC_INGRESS",
+                "chain": "br0_bf_hook_tc_ingress",
+                "position": 1,
+                "action": "DROP",
+                "enable": "true",
+                "name": "TC_INGRESSName1",
+                "interface": "br0",
+                "l3_protocol": "IPv4",
+                "l4_protocol": "TCP",
+                "source": "",
+                "sport": "",
+                "destination": "8.8.8.8",
+                "dport": "",
+                "tcp_flags": "",
+                "ipv6_next_header": "",
+                "icmp_type": "",
+                "icmp_code": "",
+                "icmpv6_type": "",
+                "icmpv6_code": "",
+                "probability": ""
+            }
+        },
+        {
+            "rule": {
+                "id": "3",
+                "UUID": "bpf-3-19700101000000000-9042",
+                "hook": "BF_HOOK_TC_EGRESS",
+                "chain": "br0_bf_hook_tc_egress",
+                "position": 1,
+                "action": "DROP",
+                "enable": "true",
+                "name": "TC_EGRESSName1",
+                "interface": "br0",
+                "l3_protocol": "IPv4",
+                "l4_protocol": "TCP",
+                "source": "",
+                "sport": "",
+                "destination": "8.8.8.8",
+                "dport": "",
+                "tcp_flags": "",
+                "ipv6_next_header": "",
+                "icmp_type": "",
+                "icmp_code": "",
+                "icmpv6_type": "",
+                "icmpv6_code": "",
+                "probability": ""
+            }
+        }
+    ]
+}

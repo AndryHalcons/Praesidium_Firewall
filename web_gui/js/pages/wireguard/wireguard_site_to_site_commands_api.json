@@ -1,0 +1,53 @@
+{
+  "wireguard_site_to_site": {
+    "list": {
+      "method": "GET",
+      "path": "/wireguard/site-to-site"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/wireguard/site-to-site"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/wireguard/site-to-site/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/wireguard/site-to-site/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "menu.wireguard_site_to_site",
+      "description_key": "wireguard.site_to_site_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "rows_key": "entries",
+      "payload_wrapper": "rule",
+      "payload_fields": [
+        "name",
+        "enabled",
+        "interface",
+        "local_tunnel_ip",
+        "remote_tunnel_ip",
+        "local_networks",
+        "remote_networks",
+        "listen_port",
+        "remote_endpoint",
+        "private_key",
+        "remote_public_key",
+        "keepalive",
+        "mtu"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "wireguard",
+      "loading_key": "wireguard.loading",
+      "empty_key": "wireguard.empty"
+    }
+  }
+}

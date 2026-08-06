@@ -1,0 +1,24 @@
+{
+    "table_users": {
+        "select": {
+            "user_role": [
+                "admin",
+                "viewer"
+            ],
+            "user_language": [
+                "english",
+                "espanol"
+            ]
+        },
+        "checkbox": {
+            "force_password_change": {
+                "checked": "true",
+                "unchecked": "false"
+            }
+        },
+        "not_editable": {
+            "id": [],
+            "password_changed_at": []
+        }
+    }
+}

@@ -1,0 +1,173 @@
+{
+  "BF_HOOK_XDP": {
+    "select": {
+      "action": [
+        "DROP"
+      ],
+      "l3_protocol": [
+        "",
+        "IPv4",
+        "IPv6",
+        "MPLS",
+        "IPX",
+        "ARP"
+      ],
+      "l4_protocol": [
+        "TCP",
+        "UDP",
+        "ICMP",
+        "ICMPv6",
+        "SCTP",
+        "DCCP"
+      ],
+      "ipv6_next_header": [
+        "",
+        "TCP",
+        "UDP",
+        "ICMP",
+        "ICMPv6",
+        "SCTP",
+        "DCCP",
+        "Hop-by-Hop",
+        "Routing",
+        "Fragment",
+        "AH",
+        "ESP",
+        "Destination"
+      ],
+      "tcp_flags": [
+        "",
+        "fin",
+        "syn",
+        "rst",
+        "psh",
+        "ack",
+        "urg",
+        "ece",
+        "cwr"
+      ],
+      "icmp_type": [
+        "",
+        "echo-reply",
+        "destination-unreachable",
+        "source-quench",
+        "redirect",
+        "echo-request",
+        "router-advertisement",
+        "router-solicitation",
+        "time-exceeded",
+        "parameter-problem",
+        "timestamp-request",
+        "timestamp-reply",
+        "address-mask-request",
+        "address-mask-reply"
+      ],
+      "icmp_code": [
+        "",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "icmpv6_type": [
+        "",
+        "echo-request",
+        "echo-reply",
+        "destination-unreachable",
+        "packet-too-big",
+        "time-exceeded",
+        "parameter-problem",
+        "router-solicitation",
+        "router-advertisement",
+        "neighbor-solicitation",
+        "neighbor-advertisement",
+        "redirect",
+        "multicast-listener-query",
+        "multicast-listener-report",
+        "multicast-listener-done"
+      ],
+      "icmpv6_code": [
+        "",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "checkbox": {
+      "log": {
+        "checked": "true",
+        "unchecked": "false"
+      },
+      "enable": {
+        "checked": "true",
+        "unchecked": "false"
+      }
+    },
+    "not_editable": {
+      "id": [
+        "1-10000"
+      ],
+      "hook": [
+        "BF_HOOK_XDP",
+        "BF_HOOK_TC_INGRESS",
+        "BF_HOOK_TC_EGRESS"
+      ],
+      "chain": []
+    },
+    "object_multiselect": {
+      "source": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "destination": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "sport": [
+        "GET /api/v1/alias-services/service-groups",
+        "GET /api/v1/alias-services/services"
+      ],
+      "dport": [
+        "GET /api/v1/alias-services/service-groups",
+        "GET /api/v1/alias-services/services"
+      ]
+    },
+    "select_list": {
+      "interface": [
+        "GET /api/v1/interfaces/ethernets"
+      ]
+    },
+    "tooltip_fields": {
+      "source": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "destination": [
+        "GET /api/v1/alias-ip/address-groups",
+        "GET /api/v1/alias-ip/addresses"
+      ],
+      "sport": [
+        "GET /api/v1/alias-services/service-groups",
+        "GET /api/v1/alias-services/services"
+      ],
+      "dport": [
+        "GET /api/v1/alias-services/service-groups",
+        "GET /api/v1/alias-services/services"
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="icon" href="logo/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="assets/css/legacy.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <section id="login-view" class="login-view hidden" data-i18n-aria-label="app.login_aria">
+    <div class="login-container">
+      <img src="logo/praesidium_logo_transparent_mini.png" data-i18n-alt="app.title" class="logo_login">
+      <form id="login-form" autocomplete="on">
+        <input id="login-username" type="text" name="username" data-i18n-placeholder="app.username_placeholder" required autocomplete="username">
+        <input id="login-password" type="password" name="password" data-i18n-placeholder="app.password_placeholder" required autocomplete="current-password">
+        <button type="submit" data-i18n="app.login_button"></button>
+        <p id="login-error" class="error-message" role="alert"></p>
+      </form>
+      <button id="api-settings-toggle" class="praesidium-link-button" type="button" data-i18n="app.api_toggle"></button>
+      <div id="api-settings" class="api-settings hidden">
+        <label for="api-base-input" data-i18n="app.api_base_label"></label>
+        <input id="api-base-input" type="url" placeholder="http://192.0.2.10:8000/api/v1">
+        <button id="api-base-save" type="button" data-i18n="app.save"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="app-view" class="app-view hidden" data-i18n-aria-label="app.webgui_aria">
+    <div class="header-top">
+      <img src="logo/praesidium_logo_transparent_mini.png" data-i18n-alt="app.title" class="header-logo">
+      <div class="header-left">
+        <h1 data-i18n="app.title"></h1>
+        <h2 id="welcome-text" data-i18n="app.welcome_default"></h2>
+        <div class="user-info">
+          <p><span data-i18n="app.role_label"></span> <span id="user-role">-</span></p>
+          <p><span data-i18n="app.language_label"></span> <span id="user-language">-</span></p>
+          <p><span data-i18n="app.api_label"></span> <span id="api-state" data-i18n="app.api_state_unknown"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="top-menu" id="top-menu" data-i18n-aria-label="app.top_menu_aria"></nav>
+    <aside class="sidebar" id="sidebar" data-i18n-aria-label="app.sidebar_aria"></aside>
+    <main class="main-content" id="main-content" tabindex="-1"></main>
+  </section>
+
+  <script src="libraries/chart.umd.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/api-client.js"></script>
+  <script src="js/app-state.js"></script>
+  <script src="js/core/ui-helpers.js"></script>
+  <script src="js/core/dom.js"></script>
+  <script src="js/core/table-filter.js"></script>
+  <script src="js/core/modal.js"></script>
+  <script src="js/core/api-commands.js"></script>
+  <script src="js/core/generic_table.js"></script>
+  <script src="js/pages/dashboard/dashboard.js"></script>
+  <script src="js/pages/services/services.js"></script>
+  <script src="js/pages/system_logging/system_logging.js"></script>
+  <script src="js/pages/routing/routing.js"></script>
+  <script src="js/pages/interfaces/interfaces.js"></script>
+  <script src="js/pages/generic/status-page.js"></script>
+  <script src="js/pages/alias_address/alias_address.js"></script>
+  <script src="js/pages/alias_addr_group/alias_addr_group.js"></script>
+  <script src="js/pages/alias_service/alias_service.js"></script>
+  <script src="js/pages/alias_service_group/alias_service_group.js"></script>
+  <script src="js/pages/bpfilter/bpfilter_xdp.js"></script>
+  <script src="js/pages/bpfilter/bpfilter_tc_ingress.js"></script>
+  <script src="js/pages/bpfilter/bpfilter_tc_egress.js"></script>
+  <script src="js/pages/nftables/nftables_forwarding.js"></script>
+  <script src="js/pages/nftables/nftables_prerouting.js"></script>
+  <script src="js/pages/nftables/nftables_postrouting.js"></script>
+  <script src="js/pages/nftables/nftables_input.js"></script>
+  <script src="js/pages/nftables/nftables_output.js"></script>
+  <script src="js/pages/wireguard/wireguard.js"></script>
+  <script src="js/pages/certificates/certificates.js"></script>
+  <script src="js/pages/dnsmasq/dnsmasq.js"></script>
+  <script src="js/pages/users/users.js"></script>
+  <script src="js/pages/password_policy/password_policy.js"></script>
+  <script src="js/pages/login_attempts/login_attempts.js"></script>
+  <script src="js/pages/monitor_logs/monitor_logs.js"></script>
+  <script src="js/pages/monitor_session/monitor_session.js"></script>
+  <script src="js/pages/commit/commit.js"></script>
+  <script src="js/pages/registry.js"></script>
+  <script src="js/shell.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

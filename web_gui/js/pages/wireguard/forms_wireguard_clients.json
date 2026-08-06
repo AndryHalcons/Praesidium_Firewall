@@ -1,0 +1,32 @@
+{
+  "wireguard_clients": {
+    "select": {},
+    "checkbox": {
+      "enabled": {
+        "checked": "true",
+        "unchecked": "false"
+      }
+    },
+    "not_editable": {
+      "id": [],
+      "client_private_key": [],
+      "client_public_key": []
+    },
+    "select_list": {
+      "vpn": [
+        "GET /api/v1/wireguard/remote-access"
+      ]
+    },
+    "tooltip_fields": {
+      "vpn": [
+        "GET /api/v1/wireguard/remote-access"
+      ]
+    },
+    "button": {
+      "exports": [
+        "download_config",
+        "download_qr"
+      ]
+    }
+  }
+}

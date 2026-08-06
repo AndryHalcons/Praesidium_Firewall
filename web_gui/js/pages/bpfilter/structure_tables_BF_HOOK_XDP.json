@@ -1,0 +1,25 @@
+{
+  "BF_HOOK_XDP": [
+    "id",
+    "hook",
+    "chain",
+    "position",
+    "action",
+    "enable",
+    "name",
+    "interface",
+    "l3_protocol",
+    "l4_protocol",
+    "source",
+    "sport",
+    "destination",
+    "dport",
+    "tcp_flags",
+    "ipv6_next_header",
+    "icmp_type",
+    "icmp_code",
+    "icmpv6_type",
+    "icmpv6_code",
+    "probability"
+  ]
+}

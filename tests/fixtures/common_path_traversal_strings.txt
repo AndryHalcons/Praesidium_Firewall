@@ -1,0 +1,6 @@
+../../etc/passwd
+../../../var/www/config/users.json
+..\..\..\windows\win.ini
+/absolute/path/should/not/be/accepted
+./../relative
+%2e%2e%2f%2e%2e%2fetc%2fpasswd

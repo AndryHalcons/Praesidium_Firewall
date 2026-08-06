@@ -1,0 +1,54 @@
+{
+  "dnsmasq_scopes": {
+    "list": {
+      "method": "GET",
+      "path": "/dnsmasq/scopes"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/dnsmasq/scopes"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/dnsmasq/scopes/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/dnsmasq/scopes/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "dnsmasq_page.scopes_title",
+      "description_key": "dnsmasq_page.scopes_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "rows_key": "rules",
+      "payload_wrapper": "rule",
+      "payload_fields": [
+        "name",
+        "enable",
+        "mode",
+        "interface",
+        "range_start",
+        "range_end",
+        "lease_time",
+        "gateway",
+        "netmask",
+        "dns_primary",
+        "dns_secondary",
+        "ntp_server",
+        "relay_local_ip",
+        "relay_dest_server"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "dnsmasq_page.columns",
+      "loading_key": "dnsmasq_page.loading",
+      "empty_key": "dnsmasq_page.scopes_empty"
+    }
+  }
+}

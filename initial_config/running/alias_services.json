@@ -1,0 +1,73 @@
+{
+  "alias_service": {
+    "aliaser-1-19700101000000000-0724": {
+      "id": 1,
+      "UUID": "aliaser-1-19700101000000000-0724",
+      "name": "port-22",
+      "content": [
+        "22"
+      ]
+    },
+    "aliaser-2-19700101000000000-5534": {
+      "id": 2,
+      "UUID": "aliaser-2-19700101000000000-5534",
+      "name": "port-80",
+      "content": [
+        "80"
+      ]
+    },
+    "aliaser-3-19700101000000000-4190": {
+      "id": 3,
+      "UUID": "aliaser-3-19700101000000000-4190",
+      "name": "port-443",
+      "content": [
+        "443"
+      ]
+    },
+    "aliaser-4-19700101000000000-7318": {
+      "id": 4,
+      "UUID": "aliaser-4-19700101000000000-7318",
+      "name": "port-53",
+      "content": [
+        "53"
+      ]
+    },
+    "aliaser-5-19700101000000000-0536": {
+      "id": 5,
+      "UUID": "aliaser-5-19700101000000000-0536",
+      "name": "port-5353",
+      "content": [
+        "5353"
+      ]
+    }
+  },
+  "alias_service_group": {
+    "aliassergroup-1-19700101000000000-2835": {
+      "id": 1,
+      "UUID": "aliassergroup-1-19700101000000000-2835",
+      "name": "group_ports_Management",
+      "content": [
+        "aliaser-2-19700101000000000-5534",
+        "aliaser-3-19700101000000000-4190",
+        "aliaser-1-19700101000000000-0724"
+      ]
+    },
+    "aliassergroup-2-19700101000000000-0473": {
+      "id": 2,
+      "UUID": "aliassergroup-2-19700101000000000-0473",
+      "name": "group_ports_remote_administration",
+      "content": [
+        "aliaser-1-19700101000000000-0724"
+      ]
+    },
+    "aliassergroup-3-19700101000000000-3305": {
+      "id": 3,
+      "UUID": "aliassergroup-3-19700101000000000-3305",
+      "name": "group_ports_DNS",
+      "content": [
+        "aliaser-4-19700101000000000-7318",
+        "aliaser-5-19700101000000000-0536"
+      ]
+    }
+  }
+}

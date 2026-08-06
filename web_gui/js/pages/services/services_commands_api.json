@@ -1,0 +1,33 @@
+{
+    "services": {
+        "list": {
+            "method": "GET",
+            "path": "/services/rows"
+        },
+        "update": {
+            "method": "PATCH",
+            "path": "/services/{service_name}",
+            "params": [
+                "service_name"
+            ]
+        },
+        "table": {
+            "title_key": "services.title",
+            "description_key": "services.description",
+            "row_key": "service_name",
+            "context_key": "service_name",
+            "rows_key": "services",
+            "payload_fields": [
+                "desired_enabled"
+            ],
+            "readonly_chips": true,
+            "column_label_prefix": "services",
+            "loading_key": "services.loading",
+            "empty_key": "common.empty_dash",
+            "disable_buttons": [
+                "add",
+                "delete"
+            ]
+        }
+    }
+}

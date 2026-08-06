@@ -1,0 +1,40 @@
+{
+  "alias_service": {
+    "list": {
+      "method": "GET",
+      "path": "/alias-services/services"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/alias-services/services"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/alias-services/services/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/alias-services/services/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "menu.alias_service",
+      "description_key": "alias.service_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "payload_fields": [
+        "name",
+        "content"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "alias",
+      "loading_key": "alias.loading",
+      "empty_key": "alias.empty"
+    }
+  }
+}

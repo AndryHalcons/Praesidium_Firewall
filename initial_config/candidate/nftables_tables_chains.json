@@ -1,0 +1,85 @@
+{
+    "nftables": [
+        {
+            "metainfo": {
+                "version": "1.0.9",
+                "release_name": "Old Doc Yak #3",
+                "json_schema_version": 1
+            }
+        },
+        {
+            "table": {
+                "family": "inet",
+                "name": "filter",
+                "handle": 1
+            }
+        },
+        {
+            "table": {
+                "family": "inet",
+                "name": "nat",
+                "handle": 2
+            }
+        },
+        {
+            "chain": {
+                "family": "inet",
+                "table": "filter",
+                "name": "input",
+                "handle": 1,
+                "type": "filter",
+                "hook": "input",
+                "prio": 0,
+                "policy": "accept"
+            }
+        },
+        {
+            "chain": {
+                "family": "inet",
+                "table": "filter",
+                "name": "output",
+                "handle": 2,
+                "type": "filter",
+                "hook": "output",
+                "prio": 0,
+                "policy": "accept"
+            }
+        },
+        {
+            "chain": {
+                "family": "inet",
+                "table": "filter",
+                "name": "FORWARDING",
+                "handle": 3,
+                "type": "filter",
+                "hook": "forward",
+                "prio": 0,
+                "policy": "accept"
+            }
+        },
+        {
+            "chain": {
+                "family": "inet",
+                "table": "nat",
+                "name": "POSTROUTING",
+                "handle": 4,
+                "type": "nat",
+                "hook": "postrouting",
+                "prio": 100,
+                "policy": "accept"
+            }
+        },
+        {
+            "chain": {
+                "family": "inet",
+                "table": "nat",
+                "name": "PREROUTING",
+                "handle": 5,
+                "type": "nat",
+                "hook": "prerouting",
+                "prio": -100,
+                "policy": "accept"
+            }
+        }
+    ]
+}

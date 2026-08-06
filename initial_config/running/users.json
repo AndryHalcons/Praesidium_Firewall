@@ -1,0 +1,75 @@
+{
+    "table_users": [
+
+        {
+            "id": "1",
+            "UUID": "users-1-20260704172552143-8672",
+            "user_name": "testuser",
+            "user_pass": "$argon2id$v=19$m=65536,t=4,p=1$T1ltdFlMOC5NTGJMc2QzNA$rKS3oit7qO3BdNxziJy6FkTVx+y\/1qMkNP4ygXgMy8U",
+            "user_role": "viewer",
+            "user_language": "espanol",
+            "password_changed_at": "2026-07-08T00:00:00+00:00",
+            "force_password_change": "false"
+        },
+        {
+            "id": "2",
+            "UUID": "users-2-20260704172552143-8673",
+            "user_name": "testuser2",
+            "user_pass": "$argon2id$v=19$m=65536,t=4,p=1$T1ltdFlMOC5NTGJMc2QzNA$rKS3oit7qO3BdNxziJy6FkTVx+y\/1qMkNP4ygXgMy8U",
+            "user_role": "admin",
+            "user_language": "english",
+            "password_changed_at": "2026-07-08T00:00:00+00:00",
+            "force_password_change": "false"
+        },
+        {
+            "id": "3",
+            "UUID": "users-3-20260704172552143-9689",
+            "user_name": "praesidium",
+            "user_pass": "$argon2id$v=19$m=65536,t=4,p=1$TUI0VkpXTXkucW9yRDBMSA$8Vi9SRjwZXHObcnaxd/TOrdP07OIdGzOpBrKlopl38w",
+            "user_role": "admin",
+            "user_language": "espanol",
+            "password_changed_at": "2026-07-08T00:00:00+00:00",
+            "force_password_change": "false"
+        },
+        {
+            "id": "4",
+            "UUID": "users-4-20260704172552143-8673",
+            "user_name": "alpha",
+            "user_pass": "$argon2id$v=19$m=65536,t=4,p=1$TUI0VkpXTXkucW9yRDBMSA$8Vi9SRjwZXHObcnaxd/TOrdP07OIdGzOpBrKlopl38w",
+            "user_role": "admin",
+            "user_language": "english",
+            "password_changed_at": "2026-07-08T00:00:00+00:00",
+            "force_password_change": "false"
+        }
+    ],
+    "table_password_policy": [
+        {
+            "id": "1",
+            "UUID": "passpolicy-1-20260703222740923-9764",
+            "password_min_length": "12",
+            "password_require_uppercase": "true",
+            "password_require_lowercase": "true",
+            "password_require_number": "true",
+            "password_require_symbol": "true",
+            "password_expiration_days": "90",
+            "password_history_count": "5",
+            "password_min_age_days": "0",
+            "login_max_failed_attempts": "5",
+            "login_lockout_minutes": "30",
+            "login_failed_window_minutes": "15",
+            "force_password_change_on_next_login": "false",
+            "force_password_change_for_new_users": "true",
+            "password_disallow_username": "true",
+            "password_disallow_common_passwords": "true",
+            "force_password_change_since": ""
+        }
+    ],
+    "table_password_history": [
+        {
+            "user_id": "1",
+            "password_hash": "$argon2id$v=19$m=65536,t=4,p=1$RTJoWFhxL0ZrUlN0UnQ0aA$F41hCFBgH8Woj5B\/OPA2ZcqGpM1cclGzsiHES2mn\/50",
+            "changed_at": "2026-07-06T18:12:55+00:00"
+        }
+    ],
+    "table_login_attempts": []
+}

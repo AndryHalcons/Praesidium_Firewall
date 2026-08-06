@@ -1,0 +1,8 @@
+{
+    "table_management_tls": [
+        "id",
+        "certificate_file",
+        "certificate_key",
+        "certificate_chain"
+    ]
+}

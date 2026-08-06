@@ -1,0 +1,51 @@
+{
+  "wireguard_server": {
+    "list": {
+      "method": "GET",
+      "path": "/wireguard/remote-access"
+    },
+    "create": {
+      "method": "POST",
+      "path": "/wireguard/remote-access"
+    },
+    "update": {
+      "method": "PATCH",
+      "path": "/wireguard/remote-access/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "delete": {
+      "method": "DELETE",
+      "path": "/wireguard/remote-access/{uuid}",
+      "params": [
+        "uuid"
+      ]
+    },
+    "table": {
+      "title_key": "menu.wireguard_server",
+      "description_key": "wireguard.server_description",
+      "row_key": "UUID",
+      "context_key": "uuid",
+      "rows_key": "entries",
+      "payload_wrapper": "rule",
+      "payload_fields": [
+        "name",
+        "enabled",
+        "interface",
+        "server_vpn_ip",
+        "vpn_network",
+        "listen_port",
+        "public_endpoint",
+        "internal_networks",
+        "dns",
+        "private_key",
+        "mtu"
+      ],
+      "readonly_chips": true,
+      "column_label_prefix": "wireguard",
+      "loading_key": "wireguard.loading",
+      "empty_key": "wireguard.empty"
+    }
+  }
+}

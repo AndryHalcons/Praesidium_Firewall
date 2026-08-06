@@ -1,0 +1,17 @@
+{
+  "Search_Filter": [
+    "Start_Date",
+    "Start_Time",
+    "End_Date",
+    "End_Time",
+    "Source_IP",
+    "Destination_IP",
+    "Source_Port",
+    "Destination_Port",
+    "Protocol",
+    "Action",
+    "Firewall",
+    "Max_Records"
+  ]
+
+}

@@ -1,0 +1,38 @@
+{
+    "UUID": "servicesstatus-1-19700101000000000-8865",
+    "services": {
+        "dnsmasq": {
+            "desired_enabled": "true"
+        },
+        "nftables": {
+            "desired_enabled": "true"
+        },
+        "rsyslog": {
+            "desired_enabled": "true"
+        },
+        "apache2": {
+            "desired_enabled": "true"
+        },
+        "praesidium-fastapi": {
+            "desired_enabled": "true"
+        },
+        "bpfilter": {
+            "desired_enabled": "true"
+        },
+        "systemd-networkd": {
+            "desired_enabled": "true"
+        },
+        "systemd-resolved": {
+            "desired_enabled": "true"
+        },
+        "ssh": {
+            "desired_enabled": "true"
+        },
+        "forwarding_ipv4": {
+            "desired_enabled": "true"
+        },
+        "forwarding_ipv6": {
+            "desired_enabled": "true"
+        }
+    }
+}

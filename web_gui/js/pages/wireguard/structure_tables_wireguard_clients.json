@@ -1,0 +1,14 @@
+{
+  "wireguard_clients": [
+    "id",
+    "name",
+    "enabled",
+    "vpn",
+    "client_vpn_ip",
+    "client_private_key",
+    "client_public_key",
+    "allowed_ips",
+    "keepalive",
+    "exports"
+  ]
+}

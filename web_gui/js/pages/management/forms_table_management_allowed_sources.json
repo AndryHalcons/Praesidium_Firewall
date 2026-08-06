@@ -1,0 +1,11 @@
+{
+    "table_management_allowed_sources": {
+        "select": {},
+        "checkbox": {},
+        "not_editable": {
+            "id": [
+                "1-10000"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1615 @@
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Generic / Praesidium-style visual theme
+   Genérico / Tema visual praesidium-style
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+:root {
+    --praesidium-bg-page: #e7eef5;
+    --praesidium-bg-panel: #ffffff;
+    --praesidium-bg-soft: #f7f9fc;
+    --praesidium-bg-dark: #0b1726;
+    --praesidium-bg-dark-2: #111f33;
+    --praesidium-bg-dark-3: #182b43;
+    --praesidium-bg-sidebar: #132238;
+    --praesidium-border: #d9e2ec;
+    --praesidium-border-strong: #b8c6d7;
+    --praesidium-text: #1f2d3d;
+    --praesidium-text-soft: #637083;
+    --praesidium-text-light: #f7fafc;
+    --praesidium-accent: #0f6fb3;
+    --praesidium-accent-hover: #0a5f9d;
+    --praesidium-accent-soft: #e6f2fb;
+    --praesidium-success: #14805e;
+    --praesidium-warning: #b7791f;
+    --praesidium-danger: #c2413b;
+    --praesidium-danger-hover: #a93631;
+    --praesidium-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.08);
+    --praesidium-shadow-md: 0 12px 30px rgba(15, 23, 42, 0.16);
+    --praesidium-radius-sm: 6px;
+    --praesidium-radius-md: 10px;
+    --praesidium-radius-lg: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--praesidium-text);
+    background:
+        radial-gradient(circle at top left, rgba(15, 111, 179, 0.10), transparent 34%),
+        linear-gradient(180deg, #edf3f8 0%, var(--praesidium-bg-page) 100%);
+}
+
+.boton-generic,
+table.interfaz button,
+.add-user-btn,
+.edit-btn,
+.save-btn,
+.delete-btn,
+.cancel-btn,
+.modal-button {
+    margin: 2px;
+    padding: 7px 14px;
+    border: 1px solid transparent;
+    border-radius: var(--praesidium-radius-sm);
+    background: linear-gradient(180deg, #1379bf 0%, var(--praesidium-accent) 100%);
+    color: var(--praesidium-text-light);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.14);
+    transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.boton-generic:hover,
+table.interfaz button:hover,
+.add-user-btn:hover,
+.edit-btn:hover,
+.save-btn:hover,
+.delete-btn:hover,
+.cancel-btn:hover,
+.modal-button:hover {
+    background: linear-gradient(180deg, #0f6fb3 0%, var(--praesidium-accent-hover) 100%);
+    box-shadow: 0 4px 10px rgba(15, 111, 179, 0.22);
+    transform: translateY(-1px);
+}
+
+.boton-generic:active,
+table.interfaz button:active,
+.add-user-btn:active,
+.edit-btn:active,
+.save-btn:active,
+.delete-btn:active,
+.cancel-btn:active,
+.modal-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+}
+
+.delete-btn,
+.modal-button.cancel,
+.cancel-btn {
+    background: linear-gradient(180deg, #6b7788 0%, #4b5563 100%);
+}
+
+.delete-btn:hover,
+.modal-button.cancel:hover,
+.cancel-btn:hover {
+    background: linear-gradient(180deg, #5b6575 0%, #374151 100%);
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Estilos para el formulario de login
+   Styles for the login form
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+body:has(.login-container) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 15%, rgba(40, 120, 180, 0.28), transparent 32%),
+        radial-gradient(circle at 85% 80%, rgba(10, 31, 51, 0.45), transparent 34%),
+        linear-gradient(135deg, #07111f 0%, #0d1b2e 50%, #12253c 100%);
+}
+
+.login-container {
+    width: 360px;
+    margin: 0 auto;
+    padding: 30px 30px 26px;
+    color: var(--praesidium-text-light);
+    border: 1px solid rgba(167, 187, 213, 0.26);
+    border-radius: var(--praesidium-radius-lg);
+    background: linear-gradient(180deg, rgba(19, 34, 56, 0.96), rgba(10, 23, 38, 0.98));
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(8px);
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-container input {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 12px 13px;
+    border: 1px solid rgba(184, 198, 215, 0.38);
+    border-radius: var(--praesidium-radius-sm);
+    color: var(--praesidium-text-light);
+    background: rgba(6, 18, 31, 0.68);
+    outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.login-container input::placeholder {
+    color: rgba(247, 250, 252, 0.62);
+}
+
+.login-container input:focus {
+    border-color: #5aa9e6;
+    background: rgba(8, 24, 41, 0.86);
+    box-shadow: 0 0 0 3px rgba(15, 111, 179, 0.28);
+}
+
+.login-container button {
+    width: 100%;
+    margin-top: 4px;
+    padding: 12px 14px;
+    border: 1px solid rgba(118, 180, 225, 0.35);
+    border-radius: var(--praesidium-radius-sm);
+    background: linear-gradient(180deg, #147ec7 0%, #0b609f 100%);
+    color: var(--praesidium-text-light);
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.login-container button:hover {
+    background: linear-gradient(180deg, #168bd8 0%, #0d6caf 100%);
+    box-shadow: 0 8px 18px rgba(15, 111, 179, 0.26);
+    transform: translateY(-1px);
+}
+
+.login-container .error-message {
+    min-height: 20px;
+    margin: 4px 0 0;
+    color: #ffb4a8;
+    text-align: center;
+    font-size: 13px;
+}
+
+.logo_login {
+    width: 190px;
+    height: 190px;
+    display: block;
+    margin: 0 auto 18px auto;
+    padding: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.82) 45%, rgba(255, 255, 255, 0.00) 72%);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.30));
+    object-fit: contain;
+}
+
+.logo_log {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Estilos para la interfaz principal
+   Styles for the main interface
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+/* Encabezado superior / Top header */
+.header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    background: linear-gradient(90deg, var(--praesidium-bg-dark) 0%, var(--praesidium-bg-dark-2) 58%, #102a44 100%);
+    color: var(--praesidium-text-light);
+    padding: 14px 26px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(184, 198, 215, 0.18);
+    box-shadow: 0 4px 18px rgba(7, 17, 31, 0.32);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-logo {
+    width: 62px;
+    height: 62px;
+    flex: 0 0 62px;
+    object-fit: contain;
+    padding: 4px;
+    border-radius: 18px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.07) 58%, transparent 76%);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.28));
+}
+
+.header-left {
+    min-width: 0;
+}
+
+.header-top h1 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+}
+
+.header-top h2 {
+    margin: 6px 0 0;
+    color: rgba(247, 250, 252, 0.78);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.user-info {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.user-info p {
+    margin: 0;
+    padding: 3px 9px;
+    border: 1px solid rgba(184, 198, 215, 0.20);
+    border-radius: 999px;
+    color: rgba(247, 250, 252, 0.78);
+    background: rgba(255, 255, 255, 0.055);
+    font-size: 12px;
+}
+
+/* Menú horizontal / Top menu */
+.top-menu {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    right: 0;
+    min-height: 44px;
+    background: #16253a;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 999;
+    border-bottom: 1px solid rgba(184, 198, 215, 0.16);
+}
+
+.top-menu a {
+    color: rgba(247, 250, 252, 0.82);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 13px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.top-menu a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    border-bottom-color: #4aa3df;
+}
+
+/*################ Menú lateral / Sidebar ################*/
+.sidebar {
+    position: fixed;
+    top: 140px;
+    left: 0;
+    width: 238px;
+    height: calc(100% - 140px);
+    overflow-y: auto;
+    z-index: 1001;
+    background: linear-gradient(180deg, var(--praesidium-bg-sidebar) 0%, #0f1c2f 100%);
+    color: var(--praesidium-text-light);
+    padding: 14px 10px 22px;
+    border-right: 1px solid rgba(184, 198, 215, 0.14);
+    box-shadow: 4px 0 18px rgba(15, 23, 42, 0.18);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(184, 198, 215, 0.28);
+    border-radius: 999px;
+}
+
+.sidebar a {
+    display: block;
+    margin: 3px 0;
+    padding: 9px 12px 9px 24px;
+    color: rgba(247, 250, 252, 0.75);
+    border-radius: var(--praesidium-radius-sm);
+    text-decoration: none;
+    font-size: 13px;
+    transition: background 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+}
+
+.sidebar a:hover {
+    color: #ffffff;
+    background: rgba(15, 111, 179, 0.24);
+    padding-left: 28px;
+}
+
+.sidebar details {
+    margin-bottom: 8px;
+}
+
+.sidebar summary {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: 700;
+    color: rgba(247, 250, 252, 0.90);
+    border-radius: var(--praesidium-radius-sm);
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(184, 198, 215, 0.10);
+    transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.sidebar summary:hover {
+    background: rgba(15, 111, 179, 0.20);
+    border-color: rgba(90, 169, 230, 0.24);
+}
+
+.sidebar details[open] summary {
+    background: rgba(15, 111, 179, 0.28);
+    border-color: rgba(90, 169, 230, 0.34);
+}
+
+.sidebar details a {
+    padding-left: 26px;
+}
+
+/*################ Contenido principal / Main content ################*/
+.main-content {
+    margin-top: 140px;
+    margin-left: 238px;
+    padding: 26px;
+    background: transparent;
+    min-height: calc(100vh - 140px);
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+    color: #132238;
+}
+
+.main-content > h2,
+.main-content > p,
+.main-content > div,
+.main-content > form,
+.main-content > table {
+    max-width: 100%;
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Estilos para tablas principales
+   Styles for main tables
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+table.interfaz,
+.users-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 34px;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--praesidium-text);
+    background-color: var(--praesidium-bg-panel);
+    border: 1px solid var(--praesidium-border);
+    border-radius: var(--praesidium-radius-md);
+    box-shadow: var(--praesidium-shadow-sm);
+    overflow: hidden;
+}
+
+table.interfaz thead th,
+.users-table thead th {
+    background: linear-gradient(180deg, #f3f7fb 0%, #e7eef6 100%);
+    color: #24364b;
+    text-align: left;
+    padding: 12px 13px;
+    border-right: 1px solid #cbd7e4;
+    border-bottom: 1px solid var(--praesidium-border-strong);
+    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+}
+
+/* Separadores verticales suaves para que cada columna se lea de un vistazo.
+   Soft vertical separators make each column readable at a glance. */
+table.interfaz tbody td,
+.users-table tbody td {
+    border-right: 1px solid #d9e3ee;
+    border-bottom: 1px solid #edf2f7;
+    box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.68);
+    padding: 10px 12px;
+    vertical-align: top;
+    background: #ffffff;
+}
+
+table.interfaz tbody tr:nth-child(even) td,
+.users-table tbody tr:nth-child(even) td {
+    background: #fbfdff;
+}
+
+table.interfaz tbody tr:hover td,
+.users-table tbody tr:hover td {
+    background: var(--praesidium-accent-soft);
+}
+
+/* Filas de bloqueo: rojo de alerta visible para acciones drop/reject, estilo consola firewall.
+   Deny rows: visible alert red for drop/reject actions, firewall-console style. */
+table.interfaz tbody tr.generic-table-row-deny td,
+.users-table tbody tr.generic-table-row-deny td {
+    background: #ffd2d2;
+    border-bottom-color: #f3b0b0;
+}
+
+table.interfaz tbody tr.generic-table-row-deny td:first-child,
+.users-table tbody tr.generic-table-row-deny td:first-child {
+    border-left: 5px solid #d93025;
+}
+
+table.interfaz tbody tr.generic-table-row-deny:nth-child(even) td,
+.users-table tbody tr.generic-table-row-deny:nth-child(even) td {
+    background: #ffcccc;
+}
+
+table.interfaz tbody tr.generic-table-row-deny:hover td,
+.users-table tbody tr.generic-table-row-deny:hover td {
+    background: #ffc7c7;
+}
+
+table.interfaz tbody tr.generic-table-row-deny .generic-table-value,
+table.interfaz tbody tr.generic-table-row-deny select:disabled,
+.users-table tbody tr.generic-table-row-deny .generic-table-value,
+.users-table tbody tr.generic-table-row-deny select:disabled {
+    border-color: #e09191;
+    color: #7a1f1f;
+    background: linear-gradient(180deg, #fff7f7 0%, #ffdede 100%);
+}
+
+table.interfaz thead th:last-child,
+.users-table thead th:last-child,
+table.interfaz tbody td:last-child,
+.users-table tbody td:last-child {
+    border-right: none;
+    box-shadow: none;
+}
+
+table.interfaz tbody tr:last-child td,
+.users-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+table.interfaz tbody td strong {
+    display: block;
+    color: #1f3b57;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+table.interfaz tbody td span.valor {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 3px 7px;
+    border: 1px solid #dbe6f0;
+    border-radius: 999px;
+    color: #23364a;
+    background: #f2f7fc;
+    font-weight: 650;
+    line-height: 1.22;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+/* Los controles bloqueados de tablas se leen como datos, no como formulario apagado.
+   Disabled table controls read as data badges rather than inactive form fields. */
+table.interfaz tbody select:disabled,
+table.interfaz tbody input:not([type="checkbox"]):disabled,
+.users-table tbody select:disabled,
+.users-table tbody input:not([type="checkbox"]):disabled {
+    opacity: 1;
+    min-height: 24px;
+    border: 1px solid #d6e1ec;
+    border-radius: var(--praesidium-radius-sm);
+    color: #24364b;
+    background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+    font-weight: 650;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+table.interfaz tbody td .generic-table-value,
+.users-table tbody td .generic-table-value {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 3px 7px;
+    border: 1px solid #dbe6f0;
+    border-radius: var(--praesidium-radius-sm);
+    color: #23364a;
+    background: linear-gradient(180deg, #f9fcff 0%, #edf4fb 100%);
+    font-weight: 650;
+    line-height: 1.25;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+table.interfaz tbody td .generic-table-value:empty,
+.users-table tbody td .generic-table-value:empty {
+    display: none;
+}
+
+table.interfaz tbody td span.valor[contenteditable="true"] {
+    background-color: #fff7db;
+    border: 1px dashed #d69e2e;
+    border-radius: var(--praesidium-radius-sm);
+    padding: 5px;
+}
+
+/* Fila de filtros para tablas genéricas.
+   Generic-table filter row.
+   Mantiene el filtro dentro del thead para comportarse como una segunda cabecera.
+   Keeps filters inside the thead so it behaves like a second header row. */
+table.interfaz thead tr.generic-table-filter-row th {
+    padding: 7px 9px;
+    background: #edf4fb;
+    border-bottom: 1px solid var(--praesidium-border-strong);
+}
+
+table.interfaz th.generic-table-filter-actions {
+    min-width: 92px;
+}
+
+table.interfaz input.generic-table-filter-input {
+    width: 100%;
+    min-width: 92px;
+    padding: 6px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--praesidium-radius-sm);
+    color: #17212b;
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+table.interfaz input.generic-table-filter-input:focus {
+    outline: none;
+    border-color: var(--praesidium-accent);
+    box-shadow: 0 0 0 2px rgba(15, 111, 179, 0.16);
+}
+
+table.interfaz .generic-table-no-results {
+    color: #526173;
+    font-style: italic;
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Modal / Ventana de edición
+   Modal / Edit window
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(7, 17, 31, 0.62);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 22px;
+    backdrop-filter: blur(3px);
+}
+
+.modal-window {
+    background: linear-gradient(180deg, #f3f8fd 0%, #e7f0f8 100%);
+    padding: 0 24px 24px;
+    border: 1px solid #c9d8e8;
+    border-radius: var(--praesidium-radius-lg);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.30);
+    min-width: 340px;
+    width: min(96vw, 1200px);
+    max-width: 1200px;
+    max-height: 84vh;
+    overflow-y: auto;
+    font-family: inherit;
+}
+
+.modal-window h2,
+.modal-window h3 {
+    margin: 0 -24px 18px;
+    padding: 18px 24px;
+    color: #132238;
+    background: linear-gradient(90deg, #e4eef8 0%, #f4f8fc 100%);
+    border-bottom: 1px solid #c9d8e8;
+    border-radius: var(--praesidium-radius-lg) var(--praesidium-radius-lg) 0 0;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.74);
+}
+
+/* Prueba visual: distribuye los campos del modal en columnas para evitar listas largas.
+   Visual trial: lays modal fields out in columns to avoid very long vertical lists. */
+.modal-window form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    column-gap: 18px;
+    row-gap: 10px;
+    padding: 12px;
+    border: 1px solid #cddceb;
+    border-radius: var(--praesidium-radius-md);
+    background: rgba(255, 255, 255, 0.38);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.70);
+}
+
+.modal-window .modal-input-group:has(.modal-multiselect),
+.modal-window .modal-input-group:has(.modal-object-multiselect),
+.modal-window .modal-save-error,
+.modal-window .modal-actions {
+    grid-column: 1 / -1;
+}
+
+.modal-input-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 0;
+    align-items: center;
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #d7e3ef;
+    border-radius: var(--praesidium-radius-sm);
+    background: rgba(248, 251, 255, 0.90);
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+
+
+.modal-input-group:nth-of-type(even) {
+    background: rgba(242, 247, 252, 0.92);
+}
+
+.modal-prefix {
+    flex: 0 1 58%;
+    max-width: 58%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    padding: 8px 10px;
+    background: linear-gradient(180deg, #e9f2fa 0%, #dfeaf5 100%);
+    border: 1px solid #c6d5e5;
+    border-radius: var(--praesidium-radius-sm);
+    color: #26384f;
+    font-weight: 700;
+}
+
+.modal-input {
+    min-width: 92px;
+}
+
+.modal-window input[type="checkbox"] {
+    min-width: 15px;
+    flex: 0 0 auto;
+}
+
+
+.modal-window input,
+.modal-window select,
+.modal-window textarea,
+.modal-window .modal-input,
+.modal-window .modal-multiselect select,
+.modal-window .modal-object-multiselect input {
+    background: #fbfdff;
+    border-color: #b9cbe0;
+    transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.modal-window input:focus,
+.modal-window select:focus,
+.modal-window textarea:focus,
+.modal-window .modal-input:focus,
+.modal-window .modal-multiselect select:focus,
+.modal-window .modal-object-multiselect input:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #4aa3df;
+    box-shadow: 0 0 0 3px rgba(74, 163, 223, 0.18);
+}
+
+.modal-input,
+.users-table input[type="text"],
+.users-table input[type="password"] {
+    flex: 1;
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--praesidium-border-strong);
+    border-radius: var(--praesidium-radius-sm);
+    color: var(--praesidium-text);
+    background: #ffffff;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.modal-input:focus,
+.users-table input[type="text"]:focus,
+.users-table input[type="password"]:focus {
+    border-color: #4aa3df;
+    box-shadow: 0 0 0 3px rgba(15, 111, 179, 0.14);
+}
+
+.modal-multiselect {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-multiselect-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.modal-multiselect-select {
+    min-width: 180px;
+}
+
+.multiselect-add {
+    margin-left: 0;
+    min-width: 40px;
+    padding: 8px 12px;
+}
+
+.modal-multiselect-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.multiselect-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--praesidium-border-strong);
+    background: #eef6ff;
+    color: var(--praesidium-text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.multiselect-chip-remove {
+    border: 0;
+    background: transparent;
+    color: #9b1c1c;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    padding: 0 2px;
+}
+
+.modal-object-multiselect {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(220px, 1.2fr);
+    gap: 12px;
+    align-items: start;
+}
+
+.object-multiselect-content-pane,
+.object-multiselect-selector-pane {
+    min-width: 0;
+}
+
+.object-multiselect-selected {
+    min-height: 38px;
+    padding: 6px;
+    border: 1px solid var(--praesidium-border);
+    border-radius: var(--praesidium-radius-sm);
+    background: #f8fafc;
+}
+
+.object-multiselect-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 240px;
+    overflow-y: auto;
+    margin-top: 6px;
+}
+
+.object-multiselect-option {
+    text-align: left;
+    padding: 7px 10px;
+    border: 1px solid var(--praesidium-border);
+    border-radius: var(--praesidium-radius-sm);
+    background: #ffffff;
+    color: var(--praesidium-text);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.object-multiselect-option:hover {
+    background: #eef6ff;
+    border-color: var(--praesidium-border-strong);
+}
+
+
+.users-table input:disabled {
+    background-color: #f3f6fa;
+    color: var(--praesidium-text-soft);
+}
+
+.modal-actions {
+    position: sticky;
+    bottom: -24px;
+    z-index: 2;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin: 12px -12px -12px;
+    padding: 14px 12px 12px;
+    background: linear-gradient(180deg, rgba(239, 246, 252, 0.82) 0%, rgba(226, 238, 248, 0.98) 100%);
+    border-top: 1px solid #cddceb;
+    backdrop-filter: blur(2px);
+}
+
+.modal-button {
+    margin-left: 10px;
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Estilos para la seccion users
+   Styles for the section users
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+.users-container {
+    margin: 20px 0;
+    font-family: inherit;
+}
+
+.add-user-btn {
+    margin-top: 10px;
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Estilos para la seccion alias
+   Styles for the section alias
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+.modal-1-alias-example {
+    display: inline-block;
+    max-width: min(92vw, 980px);
+    max-height: 84vh;
+    width: 50%;
+    height: auto;
+    padding: 24px;
+    background: var(--praesidium-bg-panel);
+    border: 1px solid var(--praesidium-border);
+    border-radius: var(--praesidium-radius-lg);
+    box-sizing: border-box;
+    box-shadow: var(--praesidium-shadow-md);
+}
+
+.modal-1-alias-example textarea.modal-input {
+    width: 100%;
+    min-height: 180px;
+    box-sizing: border-box;
+    resize: both;
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Estilos para la seccion commit
+   Styles for the commit section 
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+.commit-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 14px;
+    border: 1px solid var(--praesidium-border);
+    border-radius: var(--praesidium-radius-md);
+    background: var(--praesidium-bg-panel);
+    box-shadow: var(--praesidium-shadow-sm);
+}
+
+#commit-spinner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    color: var(--praesidium-text);
+}
+
+.spinner-icon {
+    font-size: 32px;
+    color: var(--praesidium-accent);
+    animation: commit-spinner-rotate 1s linear infinite;
+}
+
+.spinner-text {
+    font-weight: 700;
+    font-size: 15px;
+    color: #24364b;
+}
+
+@keyframes commit-spinner-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* 
+#############################################################################
+#############################################################################
+#############################################################################
+   Ajustes responsive basicos
+   Basic responsive adjustments
+#############################################################################
+#############################################################################
+#############################################################################
+*/
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+        padding: 18px;
+    }
+
+    .login-container {
+        width: calc(100vw - 36px);
+        max-width: 360px;
+    }
+}
+
+
+/* ========================================================================== */
+/* System settings form alignment                                             */
+/* Alineación del formulario de configuración del sistema                     */
+/*                                                                            */
+/* Español: mantiene todos los controles en la misma columna, incluidos los   */
+/* checkbox, para que Sistema -> Configuración se lea como una tabla limpia.  */
+/* English: keeps every control in the same column, including checkboxes, so  */
+/* System -> Settings reads like a clean table.                               */
+/* ========================================================================== */
+.settings-form .modal-input-group {
+    display: grid;
+    grid-template-columns: minmax(260px, 360px) minmax(160px, 260px);
+    align-items: center;
+    column-gap: 14px;
+}
+
+.settings-form .modal-prefix {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.settings-form .modal-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.settings-form input[type="checkbox"].modal-input {
+    justify-self: start;
+    width: 18px;
+    height: 18px;
+    margin-left: 0;
+}
+
+@media (max-width: 720px) {
+    .settings-form .modal-input-group {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+    }
+}
+
+
+/* =========================
+   Dashboard management cards
+   ========================= */
+.dashboard-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(15, 23, 42, 0.92));
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.dashboard-header h2,
+.dashboard-card h3 {
+    margin: 0;
+}
+
+.dashboard-card h3 {
+    color: #f9fafb;
+}
+
+.dashboard-header p {
+    margin: 8px 0 0;
+    color: #17212b;
+}
+
+.dashboard-refresh-pill {
+    white-space: nowrap;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.16);
+    color: #bfdbfe;
+    border: 1px solid rgba(59, 130, 246, 0.28);
+    font-size: 0.86rem;
+}
+
+.dashboard-refresh-pill[data-mode="error"] {
+    background: rgba(185, 28, 28, 0.18);
+    color: #fecaca;
+    border-color: rgba(248, 113, 113, 0.35);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.dashboard-card {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 10px;
+    background: #111827;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+}
+
+.dashboard-card-wide {
+    grid-column: span 2;
+}
+
+.dashboard-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #e5e7eb;
+}
+
+.dashboard-card-header span {
+    color: #93c5fd;
+    font-weight: 700;
+}
+
+.dashboard-chart-box {
+    position: relative;
+    width: 100%;
+}
+
+.dashboard-chart-box-cpu {
+    min-height: 240px;
+    height: 240px;
+    max-height: 760px;
+}
+
+.dashboard-chart-box-ram {
+    height: 260px;
+}
+
+.dashboard-card canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.dashboard-kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.dashboard-core-pill,
+.dashboard-metric-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    background: rgba(31, 41, 55, 0.92);
+    border: 1px solid rgba(75, 85, 99, 0.72);
+}
+
+.dashboard-core-pill {
+    flex-direction: column;
+}
+
+.dashboard-core-pill-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.dashboard-core-bar {
+    height: 5px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.96);
+}
+
+.dashboard-core-bar span {
+    display: block;
+    height: 100%;
+    min-width: 3px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.dashboard-core-pill span,
+.dashboard-metric-list span {
+    color: #9ca3af;
+}
+
+.dashboard-core-pill strong,
+.dashboard-metric-list strong {
+    color: #f9fafb;
+}
+
+.dashboard-metric-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.dashboard-disk-bar,
+.dashboard-disk-mount-bar {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.96);
+    border: 1px solid rgba(75, 85, 99, 0.72);
+}
+
+.dashboard-disk-bar {
+    margin-top: 14px;
+}
+
+.dashboard-disk-bar span,
+.dashboard-disk-mount-bar span {
+    display: block;
+    height: 100%;
+    min-width: 3px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #2dc653, #60a5fa);
+}
+
+.dashboard-disk-bar span[data-status="warning"],
+.dashboard-disk-mount[data-status="warning"] .dashboard-disk-mount-bar span {
+    background: linear-gradient(90deg, #ffbe0b, #fb923c);
+}
+
+.dashboard-disk-bar span[data-status="critical"],
+.dashboard-disk-mount[data-status="critical"] .dashboard-disk-mount-bar span {
+    background: linear-gradient(90deg, #ef4444, #f97316);
+}
+
+.dashboard-disk-mounts {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.dashboard-disk-mount,
+.dashboard-disk-empty {
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(31, 41, 55, 0.92);
+    border: 1px solid rgba(75, 85, 99, 0.72);
+}
+
+.dashboard-disk-mount-top,
+.dashboard-disk-mount-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.dashboard-disk-mount-top strong {
+    color: #f9fafb;
+}
+
+.dashboard-disk-mount-top span {
+    color: #93c5fd;
+    font-weight: 700;
+}
+
+.dashboard-disk-mount-meta {
+    margin: 5px 0 8px;
+    color: #9ca3af;
+    font-size: 0.84rem;
+}
+
+.dashboard-disk-mount-values {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin: 8px 0 9px;
+}
+
+.dashboard-disk-mount-values div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 7px 8px;
+    border-radius: 7px;
+    background: rgba(15, 23, 42, 0.78);
+    border: 1px solid rgba(75, 85, 99, 0.58);
+}
+
+.dashboard-disk-mount-values span {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.dashboard-disk-mount-values strong {
+    color: #f9fafb;
+    font-size: 0.92rem;
+}
+
+.dashboard-disk-empty {
+    color: #9ca3af;
+}
+
+.dashboard-table-wrap {
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.72);
+    text-align: left;
+}
+
+.dashboard-table th {
+    color: #cbd5e1;
+    background: rgba(31, 41, 55, 0.92);
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.dashboard-table td {
+    color: #e5e7eb;
+}
+
+@media (max-width: 980px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card-wide {
+        grid-column: span 1;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+    }
+}
+
+
+/*
+#############################################################################
+   WireGuard scenario cards and help blocks - praesidium-style
+   Tarjetas y ayudas de escenarios WireGuard - praesidium-style
+#############################################################################
+*/
+
+/* Certificados: subida de archivos con estilo Praesidium.
+   Certificates: Praesidium-styled file upload controls. */
+.cert-upload-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 18px 0 20px;
+    padding: 14px 16px;
+    background: var(--praesidium-bg-panel);
+    border: 1px solid var(--praesidium-border);
+    border-radius: var(--praesidium-radius-md);
+    box-shadow: var(--praesidium-shadow-sm);
+}
+
+.cert-upload-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cert-upload-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.cert-upload-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px 16px;
+    border: 1px solid rgba(7, 78, 128, 0.24);
+    border-radius: var(--praesidium-radius-sm);
+    background: linear-gradient(180deg, #1379bf 0%, var(--praesidium-accent) 100%);
+    color: var(--praesidium-text-light);
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(15, 111, 179, 0.22);
+    transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+}
+
+.cert-upload-button:hover,
+.cert-upload-button:focus-visible {
+    background: linear-gradient(180deg, #0f6fb3 0%, var(--praesidium-accent-hover) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(15, 111, 179, 0.28);
+    outline: none;
+}
+
+.cert-upload-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(15, 111, 179, 0.18);
+}
+
+.cert-upload-selected {
+    color: var(--praesidium-text-soft);
+    font-size: 0.92rem;
+}
+
+/* Cajita cabecera estándar siguiendo praesidium-style.
+   Standard header box following praesidium-style. */
+.wireguard-hero,
+.cajita-cabecera {
+    border: 1px solid rgba(0, 188, 212, 0.28);
+    border-left: 4px solid #00bcd4;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.12), rgba(10, 18, 28, 0.76));
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+}
+.wireguard-kicker { display: inline-flex; padding: 3px 10px; margin-bottom: 8px; border-radius: 999px; color: #9cecf6; border: 1px solid rgba(0, 188, 212, 0.35); background: rgba(0, 188, 212, 0.08); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.wireguard-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 18px; }
+.wireguard-card { position: relative; overflow: hidden; min-height: 255px; border: 1px solid rgba(0, 188, 212, 0.22); border-radius: 14px; padding: 22px; background: linear-gradient(180deg, rgba(18, 32, 48, 0.96), rgba(10, 16, 24, 0.96)); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32); }
+.wireguard-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, #00bcd4, #43e6b4, transparent); }
+.wireguard-card-icon { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; border-radius: 12px; color: #d9fbff; background: rgba(0, 188, 212, 0.14); border: 1px solid rgba(0, 188, 212, 0.28); font-size: 1.3rem; }
+.wireguard-card h2, .cajita-cabecera h1 { margin-top: 0; }
+/* Fuerza contraste claro en todo el contenido textual de las tarjetas WireGuard.
+   Forces light contrast across all textual content inside WireGuard cards. */
+.wireguard-card h2 { color: #f8fafc; }
+.wireguard-card p { color: #e5edf4; line-height: 1.55; }
+.wireguard-card li { color: #d7e3ec; }
+.wireguard-card ul { margin: 14px 0 18px 18px; padding: 0; color: #d7e3ec; line-height: 1.55; }
+/* Reutiliza el patrón de botón Praesidium y lo ajusta al fondo oscuro de la tarjeta.
+   Reuses the Praesidium button pattern and tunes it for the dark card background. */
+.wireguard-card-button { display: inline-flex; align-items: center; justify-content: center; min-width: 92px; margin-top: auto; }
+.wireguard-card-button:focus-visible { outline: 2px solid rgba(156, 236, 246, 0.9); outline-offset: 2px; }
+.wireguard-help-box, .wireguard-subsection-help { border-radius: 10px; border: 1px solid rgba(0, 188, 212, 0.22); background: rgba(0, 188, 212, 0.08); color: #17212b; padding: 12px 14px; margin: 12px 0 18px; }
+.wireguard-subsection-help { border-color: rgba(0, 188, 212, 0.18); background: rgba(0, 188, 212, 0.05); color: #23313d; margin-top: -4px; }
+
+.modal-save-error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.55);
+  border-radius: 8px;
+  color: #111827;
+  font-size: 0.9rem;
+  margin: 12px 0;
+  padding: 10px 12px;
+}
+
+
+/*
+#############################################################################
+   Checkbox global - praesidium-style
+   Global checkboxes - praesidium-style
+#############################################################################
+*/
+/* Estilo visual común para todos los checkbox de la WebGUI.
+   Common visual style for all WebGUI checkboxes. */
+/* No cambia la lógica: los checkbox editables siguen siendo editables y los disabled siguen bloqueados.
+   It does not change logic: editable checkboxes remain editable and disabled checkboxes remain locked. */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    border: 1px solid #64748b;
+    background: #334155;
+    cursor: pointer;
+    opacity: 1;
+    position: relative;
+    vertical-align: middle;
+    transition: background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease, transform 0.08s ease;
+}
+
+/* Estado activo: verde Praesidium legible.
+   Active state: readable Praesidium green. */
+input[type="checkbox"]:checked {
+    background: #22c55e;
+    border-color: #86efac;
+    box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.22);
+}
+
+/* Marca de verificación dibujada por CSS para evitar estilos nativos inconsistentes.
+   CSS-drawn check mark to avoid inconsistent native styles. */
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid #052e16;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Estado inactivo: gris azulado visible sobre fondos claros y oscuros.
+   Inactive state: visible blue-gray on light and dark backgrounds. */
+input[type="checkbox"]:not(:checked) {
+    background: #334155;
+    border-color: #94a3b8;
+}
+
+/* Estado hover solo para checkbox editables.
+   Hover state only for editable checkboxes. */
+input[type="checkbox"]:not(:disabled):hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.18);
+    transform: translateY(-1px);
+}
+
+/* Foco accesible para edición en modales/formularios.
+   Accessible focus for editing in modals/forms. */
+input[type="checkbox"]:focus-visible {
+    outline: 2px solid rgba(56, 189, 248, 0.72);
+    outline-offset: 2px;
+}
+
+/* Los checkbox disabled siguen bloqueados; solo se evita el gris apagado del navegador.
+   Disabled checkboxes remain locked; this only avoids the browser faded gray. */
+input[type="checkbox"]:disabled {
+    cursor: default;
+}

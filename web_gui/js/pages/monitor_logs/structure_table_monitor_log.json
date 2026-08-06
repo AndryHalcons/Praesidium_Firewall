@@ -1,0 +1,17 @@
+{
+  "Search_Filter": [
+    "Date",
+    "Time",
+    "ID",
+    "Chain",
+    "Action",
+    "SRC",
+    "SPT",
+    "DST",
+    "DPT",
+    "PROTO",
+    "IN",
+    "OUT"
+    
+  ]
+}

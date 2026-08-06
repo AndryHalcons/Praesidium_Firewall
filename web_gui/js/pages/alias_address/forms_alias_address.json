@@ -1,0 +1,20 @@
+{
+  "alias_address": {
+    "select": {
+      "action": [
+        ""
+      ]
+    },
+    "checkbox": {
+      "enable": {
+        "checked": "true",
+        "unchecked": "false"
+      }
+    },
+    "not_editable": {
+      "id": [
+        "1-10000"
+      ]
+    }
+  }
+}

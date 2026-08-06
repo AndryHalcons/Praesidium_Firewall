@@ -1,0 +1,24 @@
+{
+  "journald": [
+    "system_max_use",
+    "system_keep_free",
+    "runtime_max_use",
+    "max_retention_sec",
+    "compress"
+  ],
+  "system_logs": [
+    "enabled",
+    "rotation",
+    "rotate",
+    "maxsize",
+    "compress",
+    "delaycompress"
+  ],
+  "nftables_logs": [
+    "enabled",
+    "size",
+    "rotate",
+    "compress",
+    "delaycompress"
+  ]
+}

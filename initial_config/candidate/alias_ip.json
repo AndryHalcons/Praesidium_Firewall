@@ -1,0 +1,81 @@
+{
+  "alias_address": {
+    "aliasad-1-19700101000000000-6993": {
+      "id": 1,
+      "UUID": "aliasad-1-19700101000000000-6993",
+      "name": "Wan",
+      "content": [
+        "192.168.100.201"
+      ]
+    },
+    "aliasad-2-19700101000000000-1994": {
+      "id": 2,
+      "UUID": "aliasad-2-19700101000000000-1994",
+      "name": "Management",
+      "content": [
+        "192.168.100.201"
+      ]
+    },
+    "aliasad-3-19700101000000000-2854": {
+      "id": 3,
+      "UUID": "aliasad-3-19700101000000000-2854",
+      "name": "Server_cloudflare_1",
+      "content": [
+        "1.1.1.1"
+      ]
+    },
+    "aliasad-4-19700101000000000-4469": {
+      "id": 4,
+      "UUID": "aliasad-4-19700101000000000-4469",
+      "name": "Server_Google_DNS_1",
+      "content": [
+        "8.8.8.8"
+      ]
+    },
+    "aliasad-5-19700101000000000-5352": {
+      "id": 5,
+      "UUID": "aliasad-5-19700101000000000-5352",
+      "name": "private-networks-1",
+      "content": [
+        "10.0.0.0/8"
+      ]
+    },
+    "aliasad-6-19700101000000000-6352": {
+      "id": 6,
+      "UUID": "aliasad-6-19700101000000000-6352",
+      "name": "private-networks-2",
+      "content": [
+        "192.168.0.0/16"
+      ]
+    },
+    "aliasad-7-19700101000000000-9017": {
+      "id": 7,
+      "UUID": "aliasad-7-19700101000000000-9017",
+      "name": "private-networks-3",
+      "content": [
+        "172.16.0.0/12"
+      ]
+    }
+  },
+  "alias_addr_group": {
+    "aliagroup-1-19700101000000000-1659": {
+      "id": 1,
+      "UUID": "aliagroup-1-19700101000000000-1659",
+      "name": "Private-networks",
+      "content": [
+        "aliasad-5-19700101000000000-5352",
+        "aliasad-6-19700101000000000-6352",
+        "aliasad-7-19700101000000000-9017"
+      ]
+    },
+    "aliagroup-2-19700101000000000-7681": {
+      "id": 2,
+      "UUID": "aliagroup-2-19700101000000000-7681",
+      "name": "DNS-Servers",
+      "content": [
+        "aliasad-3-19700101000000000-2854",
+        "aliasad-4-19700101000000000-4469"
+      ]
+    }
+  }
+}

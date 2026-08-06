@@ -1,0 +1,12 @@
+<script>alert(1)</script>
+"; rm -rf /
+' OR '1'='1
+../../etc/passwd
+..\..\windows\system32
+${IFS}whoami
+`id`
+$(id)
+null\u0000byte
+line1
+line2
+🔥unicode

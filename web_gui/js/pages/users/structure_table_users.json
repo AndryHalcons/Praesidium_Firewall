@@ -1,0 +1,10 @@
+{
+    "table_users": [
+        "id",
+        "user_name",
+        "user_role",
+        "user_language",
+        "password_changed_at",
+        "force_password_change"
+    ]
+}
